@@ -1,0 +1,33 @@
+header{
+    background-color: #17214c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3em 3em;
+    & #logo a img{
+        height: 5em;
+        animation-name: aparecer;
+        animation-duration: 2s;
+        transition: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    & #menu .menu_nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        & .menu_nav_item a{
+            color: #ffffff;
+            margin: auto 1em;
+            font-size: 1.8em;
+            font-family: 'Nunito', sans-serif;
+            text-decoration: none;
+            font-weight: 600;
+            padding-top: .5em;
+        }
+        & #user img{
+            height: 5em;
+        }
+    }
+}

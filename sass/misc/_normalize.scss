@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html{
+    font-size: 62.5%;
+    /* las medidas relativas sean iguales a las medidas en pixeles -- 10px=1em/1rem */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style-type: none;
+}

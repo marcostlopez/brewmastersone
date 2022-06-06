@@ -1,0 +1,17 @@
+#home{
+    background-image: url(../../public/backgrounds/gareth_david_neon_cian.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    & article figure img{
+        height: 60em;
+    }
+    & h2{
+        color: #ffffff;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 400;
+        font-size: 3em;
+        & em{
+            font-weight: 900;
+        }
+    }
+}

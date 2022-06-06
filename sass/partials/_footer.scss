@@ -1,0 +1,11 @@
+footer{
+    background-color: #17214c;
+    & p{
+        color:#ffffff;
+        margin-bottom: 0;
+        margin: 1em;
+    }
+    & img{
+        height: 4em;
+    }
+}

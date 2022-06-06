@@ -1,0 +1,48 @@
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    7%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    13%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes carga{
+    0%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
