@@ -67,7 +67,7 @@ header {
       height: 5em; }
 
 #home {
-  background-image: url(../../public/backgrounds/gareth_david_neon_cian.jpg);
+  background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
   #home article figure img {
@@ -81,7 +81,7 @@ header {
       font-weight: 900; }
 
 #suscripciones {
-  background-image: url(../../public/backgrounds/markus_spiske.jpg); }
+  background-image: url(../public/backgrounds/markus_spiske.jpg); }
 
 footer {
   background-color: #17214c; }
@@ -91,6 +91,12 @@ footer {
     margin: 1em; }
   footer img {
     height: 4em; }
+  footer ul {
+    display: flex;
+    flex-direction: row; }
+    footer ul li a img {
+      width: 3em;
+      height: auto; }
 
 @keyframes aparecer {
   0% {

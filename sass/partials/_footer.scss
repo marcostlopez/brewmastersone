@@ -8,4 +8,12 @@ footer{
     & img{
         height: 4em;
     }
+    & ul{
+        display: flex;
+        flex-direction: row;
+        & li a img{
+            width: 3em;
+            height: auto;
+        }
+    }
 }
