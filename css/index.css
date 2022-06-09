@@ -109,7 +109,7 @@ header {
         font-style: normal; }
 
 #envio h2 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", serif;
   color: #00ffff;
   text-align: center; }
 
@@ -118,8 +118,16 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center; }
-  #envio article div picture img {
+  #envio article .card_envio picture img {
     width: 25em; }
+  #envio article .card_envio_descripcion {
+    color: #ffffff;
+    font-family: "Nunito", serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-align: center;
+    width: 10em;
+    margin: auto; }
 
 #birras {
   background-image: url(../public/backgrounds/gareth_david_neon_violet.jpg);
@@ -181,9 +189,30 @@ header {
     #suscripciones article .card_suscripcion {
       background-color: #17214c;
       border-radius: 2em;
+      border: 0.2em solid #00ffff;
       box-shadow: 0 0 2em #00ffff; }
       #suscripciones article .card_suscripcion figure img {
         height: 40em; }
+      #suscripciones article .card_suscripcion h4 {
+        font-family: "Nunito", serif;
+        font-weight: 800;
+        font-size: 3em;
+        color: #00ffff;
+        text-align: center; }
+      #suscripciones article .card_suscripcion .descripcion {
+        color: #ffffff;
+        font-family: "Nunito", serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.5em;
+        text-align: center; }
+      #suscripciones article .card_suscripcion .precio {
+        color: #fdf46e;
+        font-family: "Nunito", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 4em;
+        text-align: center; }
 
 #contacto {
   background-image: url(../public/backgrounds/gareth_david_neon_orange.jpg);

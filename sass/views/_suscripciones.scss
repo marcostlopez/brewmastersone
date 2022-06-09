@@ -21,9 +21,33 @@
         & .card_suscripcion{
             background-color: $principal;
             border-radius: 2em;
+            border: .2em solid $secondary;
             box-shadow: 0 0 2em $secondary;
             & figure img{
                 height: 40em;
+            }
+            & h4{
+                font-family: $font-primary;
+                font-weight: 800;
+                font-size: 3em;
+                color: $secondary;
+                text-align: center;
+            }
+            & .descripcion{
+                color: #ffffff;
+                font-family: $font-primary;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.5em;
+                text-align: center;
+            }
+            & .precio{
+                color: $fifth;
+                font-family: $font-primary;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 4em;
+                text-align: center;
             }
         }
     }

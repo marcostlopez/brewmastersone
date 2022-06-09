@@ -1,6 +1,6 @@
 #envio{
     & h2{
-        font-family: 'Nunito', sans-serif;
+        font-family: $font-primary;
         color: $secondary;
         text-align: center;
     }
@@ -9,8 +9,17 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        & div picture img{
+        & .card_envio picture img{
             width: 25em;
+        }
+        & .card_envio_descripcion{
+            color: #ffffff;
+            font-family: $font-primary;
+            font-size: 1.8em;
+            font-weight: 600;
+            text-align: center;
+            width: 10em;
+            margin: auto;
         }
     }
 }
