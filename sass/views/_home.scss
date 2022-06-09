@@ -2,6 +2,7 @@
     background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 5.6em;
     & article figure img{
         height: 60em;
     }
@@ -10,8 +11,10 @@
         font-family: 'Nunito', sans-serif;
         font-weight: 400;
         font-size: 3em;
+        margin-bottom: 0;
         & em{
             font-weight: 900;
+            font-style: normal;
         }
     }
 }

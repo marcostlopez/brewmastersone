@@ -7,13 +7,18 @@
 html{
     font-size: 62.5%;
     /* las medidas relativas sean iguales a las medidas en pixeles -- 10px=1em/1rem */
+    // overflow-x: hidden;
 }
 
 body{
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: $principal;
+    min-height: 100vh;
 }
 
 ul{
     list-style-type: none;
+    padding: 0;
 }

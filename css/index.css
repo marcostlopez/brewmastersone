@@ -9,10 +9,14 @@ html {
 
 body {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: #17214c;
+  min-height: 100vh; }
 
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+  padding: 0; }
 
 #presentacion {
   background-color: #17214c;
@@ -23,7 +27,7 @@ ul {
   left: 0;
   right: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   animation: carga ease 3s;
   animation-fill-mode: forwards; }
 
@@ -43,60 +47,142 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: .3em 3em; }
+  padding: .3em 3em;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0em .3em 1em #00ffff79; }
   header #logo a img {
     height: 5em;
     animation-name: aparecer;
     animation-duration: 2s;
     transition: ease-in-out;
     animation-iteration-count: infinite; }
+    header #logo a img:hover {
+      animation-iteration-count: unset; }
   header #menu .menu_nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center; }
+    align-items: center;
+    padding: 0;
+    margin: 0; }
     header #menu .menu_nav ul .menu_nav_item a {
-      color: #ffffff;
+      color: #00ffff80;
       margin: auto 1em;
       font-size: 1.8em;
       font-family: 'Nunito', sans-serif;
       text-decoration: none;
-      font-weight: 600;
-      padding-top: .5em; }
+      font-weight: 400;
+      padding-top: .5em;
+      transition: 1s; }
+      header #menu .menu_nav ul .menu_nav_item a:hover {
+        color: #00ffff;
+        text-shadow: .2em .2em .5em #00ffff; }
     header #menu .menu_nav ul #user img {
       height: 5em; }
 
 #home {
   background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  margin-top: 5.6em; }
   #home article figure img {
     height: 60em; }
   #home h2 {
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
-    font-size: 3em; }
+    font-size: 3em;
+    margin-bottom: 0; }
     #home h2 em {
-      font-weight: 900; }
+      font-weight: 900;
+      font-style: normal; }
+
+#envio h2 {
+  font-family: 'Nunito', sans-serif;
+  color: #00ffff;
+  text-align: center; }
+
+#envio article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  #envio article div picture img {
+    width: 25em; }
+
+#birras {
+  background-image: url(../public/backgrounds/gareth_david_neon_violet.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #birras article {
+    display: flex;
+    flex-direction: column; }
+    #birras article div:first-child {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      #birras article div:first-child picture img {
+        height: 25em;
+        animation-name: aparecer;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        transition: ease-in;
+        animation-delay: 1s; }
+    #birras article div:last-child ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-end; }
+      #birras article div:last-child ul li picture img {
+        height: 40em; }
 
 #suscripciones {
-  background-image: url(../public/backgrounds/markus_spiske.jpg); }
+  background-image: url(../public/backgrounds/markus_spiske.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #suscripciones div figure img {
+    height: 30em; }
+
+#marcas .marcas_contenedor ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 0; }
+  #marcas .marcas_contenedor ul .marcas_logos a .marcas_logos_imagen {
+    height: 5em;
+    padding: .8em; }
+
+#contacto {
+  background-image: url(../public/backgrounds/gareth_david_neon_orange.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #contacto picture img {
+    width: 50em; }
 
 footer {
   background-color: #17214c; }
   footer p {
     color: #ffffff;
     margin-bottom: 0;
-    margin: 1em; }
+    margin: 1em;
+    text-align: center; }
   footer img {
-    height: 4em; }
+    height: 4.5em; }
   footer ul {
     display: flex;
-    flex-direction: row; }
-    footer ul li a img {
-      width: 3em;
-      height: auto; }
+    flex-direction: row;
+    justify-content: space-around; }
+    footer ul a {
+      color: #ffffff; }
+      footer ul a img {
+        width: 3em;
+        height: auto; }
 
 @keyframes aparecer {
   0% {

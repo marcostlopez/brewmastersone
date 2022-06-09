@@ -4,16 +4,22 @@ footer{
         color:#ffffff;
         margin-bottom: 0;
         margin: 1em;
+        text-align: center;
     }
     & img{
-        height: 4em;
+        height: 4.5em;
     }
     & ul{
         display: flex;
         flex-direction: row;
-        & li a img{
-            width: 3em;
-            height: auto;
+        justify-content: space-around;
+        & a{
+            color: #ffffff;
+        
+            & img{
+                width: 3em;
+                height: auto;
+            }
         }
     }
 }

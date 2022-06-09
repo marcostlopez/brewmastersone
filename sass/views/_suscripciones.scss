@@ -1,3 +1,8 @@
 #suscripciones{
     background-image: url(../public/backgrounds/markus_spiske.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    & div figure img{
+        height: 30em;
+    }
 }

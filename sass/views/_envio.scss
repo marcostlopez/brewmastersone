@@ -1,0 +1,48 @@
+#envio{
+    & h2{
+        font-family: 'Nunito', sans-serif;
+        color: $secondary;
+        text-align: center;
+    }
+    & article{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        & div picture img{
+            width: 25em;
+        }
+    }
+}
+
+#birras{
+    background-image: url(../public/backgrounds/gareth_david_neon_violet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    & article{
+        display: flex;
+        flex-direction: column;
+        & div:first-child{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            & picture img{
+                height: 25em;
+                animation-name: aparecer;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                transition: ease-in;
+                animation-delay: 1s;
+            }
+        }
+        & div:last-child ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            & li picture img{
+                height: 40em;
+            }
+        }
+    }
+}
