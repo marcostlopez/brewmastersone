@@ -1,5 +1,5 @@
 #suscripciones{
-    background-image: url(../public/backgrounds/markus_spiske.jpg);
+    background-image: url(../public/backgrounds/gareth_david_neon_violet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 6.5em;
@@ -18,36 +18,76 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         margin: auto;
+        max-width: 1200px;
         & .card_suscripcion{
             background-color: $principal;
             border-radius: 2em;
             border: .2em solid $secondary;
             box-shadow: 0 0 2em $secondary;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            transition: ease-in-out 1s;
+
             & figure img{
-                height: 40em;
+                height: 30em;
             }
-            & h4{
-                font-family: $font-primary;
-                font-weight: 800;
-                font-size: 3em;
-                color: $secondary;
-                text-align: center;
+            & article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: auto;
+
+                & h4{
+                    font-family: $font-primary;
+                    font-weight: 800;
+                    font-size: 3em;
+                    color: $secondary;
+                    text-align: center;
+                }
+                & .descripcion{
+                    color: #ffffff;
+                    font-family: $font-primary;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+                & .precio{
+                    color: $fifth;
+                    font-family: $font-primary;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 4em;
+                    text-align: center;
+                }
+    
+                & .boton_sub{
+                    background-color: $principal;
+                    border: none;
+                    box-shadow: .2em .2em .5em $fifth;
+                    border-radius: .3em;
+                    padding: .5em;
+                    & a{
+                        font-family: $font-primary;
+                        font-weight: 600;
+                        font-size: 1.6em;
+                        text-decoration: none;
+                        color: $fifth;
+                    }
+                }
+
+                &>a{
+                    color: #ffffff;
+                    font-family: $font-primary;
+                    font-weight: 400;
+                    font-size: 1em;
+                    margin: 1em auto;
+                }
             }
-            & .descripcion{
-                color: #ffffff;
-                font-family: $font-primary;
-                font-weight: 500;
-                font-style: normal;
-                font-size: 1.5em;
-                text-align: center;
-            }
-            & .precio{
-                color: $fifth;
-                font-family: $font-primary;
-                font-weight: 400;
-                font-style: normal;
-                font-size: 4em;
-                text-align: center;
+
+            &:hover{
+                transform: translateY(-5%);
             }
         }
     }

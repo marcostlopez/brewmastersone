@@ -57,7 +57,7 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto; }
     .header .contenedor_menu_header #logo {
       line-height: 7em; }
@@ -217,13 +217,15 @@ ul {
   background-repeat: no-repeat; }
   #birras article {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto; }
     #birras article div:first-child {
       display: flex;
       flex-direction: row;
       justify-content: center; }
       #birras article div:first-child picture img {
-        height: 25em;
+        height: 20em;
         animation-name: aparecer;
         animation-duration: 4s;
         animation-iteration-count: infinite;
@@ -233,9 +235,29 @@ ul {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      align-items: flex-end; }
+      align-items: center;
+      margin-bottom: 0; }
       #birras article div:last-child ul li picture img {
-        height: 40em; }
+        height: 40em;
+        transition: 1s;
+        opacity: 60%; }
+        #birras article div:last-child ul li picture img:hover {
+          transform: scale(130%) translate(0%, -10%);
+          opacity: 100%; }
+
+/*rsponsive 780*/
+@media screen and (max-width: 1100px) {
+  #birras article div:last-child ul li picture img {
+    height: 35em; }
+    #birras article div:last-child ul li picture img:hover {
+      transform: scale(110%) translate(0%, -5%); } }
+
+@media screen and (max-width: 810px) {
+  #birras article div:last-child ul {
+    overflow-x: scroll;
+    justify-content: flex-start; }
+    #birras article div:last-child ul li picture img {
+      height: 25em; } }
 
 #marcas .marcas_contenedor ul {
   display: flex;
@@ -250,7 +272,7 @@ ul {
     padding: .8em; }
 
 #suscripciones {
-  background-image: url(../public/backgrounds/markus_spiske.jpg);
+  background-image: url(../public/backgrounds/gareth_david_neon_violet.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 6.5em;
@@ -267,34 +289,64 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: auto; }
+    margin: auto;
+    max-width: 1200px; }
     #suscripciones article .card_suscripcion {
       background-color: #030b15;
       border-radius: 2em;
       border: 0.2em solid #00ffff;
-      box-shadow: 0 0 2em #00ffff; }
+      box-shadow: 0 0 2em #00ffff;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      transition: ease-in-out 1s; }
       #suscripciones article .card_suscripcion figure img {
-        height: 40em; }
-      #suscripciones article .card_suscripcion h4 {
-        font-family: "Nunito", serif;
-        font-weight: 800;
-        font-size: 3em;
-        color: #00ffff;
-        text-align: center; }
-      #suscripciones article .card_suscripcion .descripcion {
-        color: #ffffff;
-        font-family: "Nunito", serif;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.5em;
-        text-align: center; }
-      #suscripciones article .card_suscripcion .precio {
-        color: #fdf46e;
-        font-family: "Nunito", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 4em;
-        text-align: center; }
+        height: 30em; }
+      #suscripciones article .card_suscripcion article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto; }
+        #suscripciones article .card_suscripcion article h4 {
+          font-family: "Nunito", serif;
+          font-weight: 800;
+          font-size: 3em;
+          color: #00ffff;
+          text-align: center; }
+        #suscripciones article .card_suscripcion article .descripcion {
+          color: #ffffff;
+          font-family: "Nunito", serif;
+          font-weight: 500;
+          font-style: normal;
+          font-size: 1.5em;
+          text-align: center; }
+        #suscripciones article .card_suscripcion article .precio {
+          color: #fdf46e;
+          font-family: "Nunito", serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 4em;
+          text-align: center; }
+        #suscripciones article .card_suscripcion article .boton_sub {
+          background-color: #030b15;
+          border: none;
+          box-shadow: 0.2em 0.2em 0.5em #fdf46e;
+          border-radius: .3em;
+          padding: .5em; }
+          #suscripciones article .card_suscripcion article .boton_sub a {
+            font-family: "Nunito", serif;
+            font-weight: 600;
+            font-size: 1.6em;
+            text-decoration: none;
+            color: #fdf46e; }
+        #suscripciones article .card_suscripcion article > a {
+          color: #ffffff;
+          font-family: "Nunito", serif;
+          font-weight: 400;
+          font-size: 1em;
+          margin: 1em auto; }
+      #suscripciones article .card_suscripcion:hover {
+        transform: translateY(-5%); }
 
 #contacto {
   background-image: url(../public/backgrounds/gareth_david_neon_orange.jpg);
@@ -318,7 +370,7 @@ footer {
   width: 100%;
   margin-bottom: 0; }
   footer .contenedor_info_footer {
-    max-width: 1000px;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -370,6 +422,16 @@ footer {
           font-family: "Montserrat", sans-serif;
           font-weight: 200;
           font-size: 1em; }
+    footer .contenedor_info_footer .pagos {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-bottom: 0; }
+      footer .contenedor_info_footer .pagos li {
+        margin: 1em; }
+        footer .contenedor_info_footer .pagos li img {
+          height: 2em; }
     footer .contenedor_info_footer > p {
       color: #ffffff;
       font-family: "Montserrat", sans-serif;
