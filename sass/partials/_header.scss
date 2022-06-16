@@ -1,49 +1,150 @@
-header{
-    background-color: #17214c;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: .3em 3em;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+.header{
+    background-color: $principal;
     z-index: 1;
-    box-shadow: 0em .3em 1em #00ffff79;
-    & #logo a img{
-        height: 5em;
-        animation-name: aparecer;
-        animation-duration: 2s;
-        transition: ease-in-out;
-        animation-iteration-count: infinite;
-        &:hover{
-            animation-iteration-count: unset;
-        }
-    }
-    & #menu .menu_nav ul{
+    box-shadow: 0em .3em 1em #00ffff80;
+    height: 7em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+    & .contenedor_menu_header{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-        padding: 0;
-        margin: 0;
-        & .menu_nav_item a{
-            color: #00ffff80;
-            margin: auto 1em;
-            font-size: 1.8em;
-            font-family: 'Nunito', sans-serif;
-            text-decoration: none;
-            font-weight: 400;
-            padding-top: .5em;
-            transition: 1s;
-            &:hover{
-                color: #00ffff;
-                text-shadow: .2em .2em .5em #00ffff;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        #logo{
+            line-height: 7em;
+            .logo img{
+                height: 6em;
+                animation-name: aparecer;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-delay: 1s;
+                transition: ease-in-out;
+                &:hover{
+                    animation-iteration-count: unset;
+                }
             }
         }
-        & #user img{
-            height: 5em;
+
+        #navbar .nav{
+            display: flex;
+
+            &-link{
+                color: $secondary;
+                font-family: $font-primary;
+                font-weight: 700;
+                font-size: 1.8em;
+                text-decoration: none;
+                line-height: 3em;
+                opacity: 20%;
+                transition: 1s;
+
+                .user{
+                    width: auto;
+                    height: 3em;
+                }
+
+                &:hover{
+                    opacity: 100%;
+                    text-shadow: .2em .2em .5em $secondary;
+                }
+            }
+
+            &-menu{
+                display: flex;
+                flex-direction: row;
+                margin-right: 4em;
+                margin-bottom: 0;
+
+                &-item{
+                    margin: 0 1em;
+                }
+            }
+
+            &-toggle{
+                background: none;
+                border: none;
+                display: none;
+                cursor: pointer;
+
+                .btn_menu{
+                    height: 4em;
+                    width: auto;
+                }
+            }
+
         }
     }
+}
+
+/*responsive 780*/
+@media screen and (max-width: 780px){
+
+    .header{
+        height: 6em;
+        
+        & .contenedor_menu_header{
+            
+            #logo{
+                line-height: 6em;
+                .logo img{
+                    height: 5em;
+                }
+            }
+    
+            #navbar .nav{
+
+                &-link{
+                    font-size: 2em;
+                    opacity: 70%;
+
+                    .user{
+                        width: auto;
+                        height: 4em;
+                    }
+
+                    &:hover{
+                        opacity: 100%;
+                    }
+                }
+
+                &-menu{
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 2em;
+                    position: fixed;
+                    top: 6em;
+                    left: 0;
+                    width: 100%;
+                    align-items: center;
+                    padding: 2em 0;
+                    background-color: #030b159a;
+
+                    height: calc(100% - 6em);
+                    overflow-y: auto;
+
+                    left: 150%;
+                    transition: left .6s;
+                    
+                    &-item{
+                        margin: 1em auto;
+                    }
+                }
+    
+                &-toggle{
+                    display: block;
+                }
+                
+                & .nav-menu_visible{
+                    left: 0%;
+                }
+            }
+        }
+    }
+    
 }

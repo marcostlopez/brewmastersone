@@ -19,8 +19,10 @@
     <!-- tipografias -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- koulen -->
-    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <!-- montserrat extralight 200 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <!-- montserrat light 300 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <!-- nunito extralight 200 -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
     <!-- nunito light 300 -->
@@ -54,38 +56,51 @@
 
 <body>
 
-    <header>
+    <header class="header">
 
-        <div id="logo">
-            <a href="./index.html">
-                <img src="./public/brewmasters_club_marca_neon.png" alt="brewmasters logo">
-            </a>
+        <div class="contenedor_menu_header">
+
+            <div id="logo">
+                <a href="./index.html" class="logo">
+                    <img src="./public/brewmasters_club_marca_neon.png" alt="brewmasters club logo">
+                </a>
+            </div>
+
+            <div id="navbar">
+                <nav class="nav">
+                    <button class="nav-toggle" aria-label="Abrir menú">
+                        <img class="btn_menu" src="./public/icons/menu_btn_neon.png" alt="boton menu">
+                    </button>
+
+                    <ul class="nav-menu">
+                        <li class="nav-menu-item">
+                            <a href="./index.html#home" class="nav-menu-link nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-menu-item">
+                            <a href="./index.html#suscripciones" class="nav-menu-link nav-link">Suscripcion</a>
+                        </li>
+                        
+                        <li class="nav-menu-item">
+                            <a href="./index.html#nosotros" class="nav-menu-link nav-link">Nosotros</a>
+                        </li>
+                        
+                        <li class="nav-menu-item">
+                            <a href="./index.html#contacto" class="nav-menu-link nav-link">Contacto</a>
+                        </li>
+                        
+                        <li class="nav-menu-item">
+                            <a href="#" class="nav-menu-link nav-link">
+                                <img class="user"src="./public/ilustraciones/user_neon.png" alt="usuario">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
         </div>
-
-        <div id="menu">
-            <nav class="menu_nav">
-                <ul>
-                    <li class="menu_nav_item">
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li class="menu_nav_item">
-                        <a href="#suscripciones">Suscripciones</a>
-                    </li>
-                    <li class="menu_nav_item">
-                        <a href="#nosotros">Nosotros</a>
-                    </li>
-                    <li class="menu_nav_item">
-                        <a href="#contacto">Contacto</a>
-                    </li>
-                    <li id="user">
-                        <a href="#"><img src="./public/ilustraciones/user_neon.png" alt="boton de usuario"></a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
     </header>
-
+    
     <main>
 
         <div id="presentacion">
@@ -156,7 +171,7 @@
             <article>
                 <div>
                     <picture>
-                        <img src="./public/ilustraciones/birra_por_favor_neon.png" alt="birra por favor">
+                        <img src="./public/ilustraciones/nue_birra_por_favor.png" alt="birra por favor">
                     </picture>
                 </div>
                 <div>
@@ -300,7 +315,8 @@
 
                 <div class="card_suscripcion" data-aos="flip-left" data-aos-duration="2000">
                     <figure>
-                        <img src="./public/ilustraciones/suscripcion_unico_mes_neon.png" alt="suscripcion por unica vez">
+                        <img src="./public/ilustraciones/suscripcion_unico_mes_neon.png"
+                            alt="suscripcion por unica vez">
                     </figure>
                     <h4>
                         Junior
@@ -320,7 +336,7 @@
 
         </section>
 
-        <section id="nosotros">
+        <!-- <section id="nosotros">
             <h2>
                 Somos Brewmasters
             </h2>
@@ -356,9 +372,9 @@
                 </figure>
             </article>
 
-        </section>
+        </section> -->
 
-        <section id="contacto">
+        <!-- <section id="contacto">
             <h2>Contacto</h2>
 
             <picture>
@@ -413,58 +429,67 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
 
-        </section>
+        </section> -->
 
     </main>
 
     <footer>
-        <div>
-            <img src="./public/brewmasters_club_marca_neon.png" alt="Brewmasters Club">
-            <ul>
+        <section class="contenedor_info_footer">
+            <div class="marca_redes">
+                <article class="marca_redes_article">
+                    <figure class="marca_redes_article_figure">
+                        <img src="./public/brewmasters_club_marca_neon.png" alt="Brewmasters Club">
+                    </figure>
+                    <figcaption class="marca_redes_article_caption">
+                        Brewmasters club, Buenos Aires, Argentina
+                    </figcaption>
+                </article>
+                <ul class="marca_redes_lista">
+                    <li class="marca_redes_lista_item">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="./public/icons/instagram_logo.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="marca_redes_lista_item">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="./public/icons/facebook_logo.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li class="marca_redes_lista_item">
+                        <a href="https://twitter.com/" target="_blank">
+                            <img src="./public/icons/twitter_logo.png" alt="twitter">
+                        </a>
+                    </li>
+                    <li class="marca_redes_lista_item">
+                        <a href="https://www.google.com/gmail/" target="_blank">
+                            <img src="./public/icons/correo_logo.png" alt="correo electronico">
+                        </a>
+                    </li>
+                    <li class="marca_redes_lista_item">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <img src="./public/icons/youtube_logo.png" alt="youtube">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="legales">
                 <li>
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <img src="./public/icons/instagram_logo.png" alt="instagram">
-                    </a>
+                    <a href="#" target="_blank">terminos y condiciones</a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/" target="_blank">
-                        <img src="./public/icons/facebook_logo.png" alt="facebook">
-                    </a>
+                    <a href="#" target="_blank">politicas de privacidad</a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/" target="_blank">
-                        <img src="./public/icons/twitter_logo.png" alt="twitter">
-                    </a>
+                    <a href="https://www.tapintoyourbeer.com/" target="_blank">consumo responsable</a>
                 </li>
                 <li>
-                    <a href="https://www.google.com/gmail/" target="_blank">
-                        <img src="./public/icons/correo_logo.png" alt="correo electronico">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/" target="_blank">
-                        <img src="./public/icons/youtube_logo.png" alt="youtube">
-                    </a>
+                    <a href="#" target="_blank">informacion de la compañia</a>
                 </li>
             </ul>
-        </div>
-        <ul>
-            <li>
-                <a href="#" target="_blank">terminos y condiciones</a>
-            </li>
-            <li>
-                <a href="#" target="_blank">politicas de privacidad</a>
-            </li>
-            <li>
-                <a href="https://www.tapintoyourbeer.com/" target="_blank">consumo responsable</a>
-            </li>
-            <li>
-                <a href="#" target="_blank">informacion de la compañia</a>
-            </li>
-        </ul>
-        <p> Beber con moderacion. Prohibida la suscripcion a menores de 18 años. No comparta el contenido con menores.
-        </p>
-        <p> &copy;Brewmasters Club. Marcos Lopez 2022 </p>
+            <p> Beber con moderacion. Prohibida la suscripcion a menores de 18 años. No comparta el contenido con menores.
+            </p>
+            <p> &copy;Brewmasters Club. Marcos Lopez 2022 </p>
+        </section>
     </footer>
 
     <!-- script boostrap -->
@@ -477,7 +502,7 @@
     <script>
         AOS.init();
     </script>
-    <script src="./js/main.js"></script>
+    <script src="./js/index.js"></script>
 
 </body>
 

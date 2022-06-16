@@ -1,40 +1,89 @@
 footer{
     background-color: $principal;
-    padding: 2em;
-    & p{
-        color:#ffffff;
-        margin-bottom: 0;
-        margin: 1em;
-        text-align: center;
-    }
-
-    & div{
+    width: 100%;
+    margin-bottom: 0;
+    & .contenedor_info_footer{
+        max-width: 1000px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        & img{
-            height: 4.5em;
-        }
-    }
-    & ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        & a{
-            color: #ffffff;
-        
-            & img{
-                width: 3em;
-                height: auto;
+        margin: auto;
+        padding: 1em .5em;
+        & .marca_redes{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            width: 70%;
+
+            &_article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &_figure{
+                    height: 4em;
+                    width: auto;
+                    overflow: hidden;
+                    & img{
+                        height: 5em;
+                        width: auto;
+                    }
+                }
+
+                &_caption{
+                    color: #ffffff;
+                    font-family: $font-secondary;
+                    font-weight: 300;
+                    font-size: 1em;
+                }
+            }
+
+            &_lista{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+
+                &_item a img{
+                    width: auto;
+                    height: 2em;
+                    margin: 0 .3em;
+                }
             }
         }
+
+        & .legales{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: auto;
+
+            & li{
+                margin: 1em 1em;
+                & a{
+                    color: #ffffff;
+                    font-family: $font-secondary;
+                    font-weight: 200;
+                    font-size: 1em;
+                }
+            }
+        }
+
+        &>p{
+            color: #ffffff;
+            font-family: $font-secondary;
+            font-size: 1em;
+            font-weight: 200;
+            margin-top: 1em;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
     }
-}
 
-/* responsive a 320px*/
-@media screen and (max-width: 320px) {
-    
-
-    
 }

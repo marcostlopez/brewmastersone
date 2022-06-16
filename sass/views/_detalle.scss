@@ -1,0 +1,14 @@
+#rey_master{
+    background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    & picture img{
+        height: 60em;
+    }
+}
+
+#contenido{
+    & picture img{
+        width: 60em;
+    }
+}

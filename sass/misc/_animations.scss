@@ -31,6 +31,30 @@
     }
 }
 
+@keyframes parpadeo{
+    0%{
+        opacity: 1;
+    }
+    3%{
+        opacity: 0;
+    }
+    6%{
+        opacity: 1;
+    }
+    9%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 @keyframes carga{
     0%{
         opacity: 1;

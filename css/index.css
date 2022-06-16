@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
@@ -11,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background-color: #17214c;
+  background-color: #030b15;
   min-height: 100vh; }
 
 ul {
@@ -35,54 +37,109 @@ ul {
   text-align: center;
   padding-top: 350px;
   color: #00ffff;
-  font-family: 'Koulen', cursive;
+  font-family: "Nunito", serif;
   font-weight: 400;
   font-size: 4em;
   text-shadow: .2em .2em 2em #00ffff;
   margin: 0px 25px 0px 25px; }
 
-header {
-  background-color: #17214c;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: .3em 3em;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
+.header {
+  background-color: #030b15;
   z-index: 1;
-  box-shadow: 0em .3em 1em #00ffff79; }
-  header #logo a img {
-    height: 5em;
-    animation-name: aparecer;
-    animation-duration: 2s;
-    transition: ease-in-out;
-    animation-iteration-count: infinite; }
-    header #logo a img:hover {
-      animation-iteration-count: unset; }
-  header #menu .menu_nav ul {
+  box-shadow: 0em .3em 1em #00ffff80;
+  height: 7em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
+  .header .contenedor_menu_header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 0;
-    margin: 0; }
-    header #menu .menu_nav ul .menu_nav_item a {
-      color: #00ffff80;
-      margin: auto 1em;
-      font-size: 1.8em;
-      font-family: 'Nunito', sans-serif;
-      text-decoration: none;
-      font-weight: 400;
-      padding-top: .5em;
-      transition: 1s; }
-      header #menu .menu_nav ul .menu_nav_item a:hover {
+    max-width: 1000px;
+    margin: 0 auto; }
+    .header .contenedor_menu_header #logo {
+      line-height: 7em; }
+      .header .contenedor_menu_header #logo .logo img {
+        height: 6em;
+        animation-name: aparecer;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        transition: ease-in-out; }
+        .header .contenedor_menu_header #logo .logo img:hover {
+          animation-iteration-count: unset; }
+    .header .contenedor_menu_header #navbar .nav {
+      display: flex; }
+      .header .contenedor_menu_header #navbar .nav-link {
         color: #00ffff;
-        text-shadow: .2em .2em .5em #00ffff; }
-    header #menu .menu_nav ul #user img {
-      height: 5em; }
+        font-family: "Nunito", serif;
+        font-weight: 700;
+        font-size: 1.8em;
+        text-decoration: none;
+        line-height: 3em;
+        opacity: 20%;
+        transition: 1s; }
+        .header .contenedor_menu_header #navbar .nav-link .user {
+          width: auto;
+          height: 3em; }
+        .header .contenedor_menu_header #navbar .nav-link:hover {
+          opacity: 100%;
+          text-shadow: 0.2em 0.2em 0.5em #00ffff; }
+      .header .contenedor_menu_header #navbar .nav-menu {
+        display: flex;
+        flex-direction: row;
+        margin-right: 4em;
+        margin-bottom: 0; }
+        .header .contenedor_menu_header #navbar .nav-menu-item {
+          margin: 0 1em; }
+      .header .contenedor_menu_header #navbar .nav-toggle {
+        background: none;
+        border: none;
+        display: none;
+        cursor: pointer; }
+        .header .contenedor_menu_header #navbar .nav-toggle .btn_menu {
+          height: 4em;
+          width: auto; }
+
+/*responsive 780*/
+@media screen and (max-width: 780px) {
+  .header {
+    height: 6em; }
+    .header .contenedor_menu_header #logo {
+      line-height: 6em; }
+      .header .contenedor_menu_header #logo .logo img {
+        height: 5em; }
+    .header .contenedor_menu_header #navbar .nav-link {
+      font-size: 2em;
+      opacity: 70%; }
+      .header .contenedor_menu_header #navbar .nav-link .user {
+        width: auto;
+        height: 4em; }
+      .header .contenedor_menu_header #navbar .nav-link:hover {
+        opacity: 100%; }
+    .header .contenedor_menu_header #navbar .nav-menu {
+      display: flex;
+      flex-direction: column;
+      margin-right: 2em;
+      position: fixed;
+      top: 6em;
+      left: 0;
+      width: 100%;
+      align-items: center;
+      padding: 2em 0;
+      background-color: #030b159a;
+      height: calc(100% - 6em);
+      overflow-y: auto;
+      left: 150%;
+      transition: left .6s; }
+      .header .contenedor_menu_header #navbar .nav-menu-item {
+        margin: 1em auto; }
+    .header .contenedor_menu_header #navbar .nav-toggle {
+      display: block; }
+    .header .contenedor_menu_header #navbar .nav .nav-menu_visible {
+      left: 0%; } }
 
 #home {
   background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
@@ -127,7 +184,7 @@ header {
       font-style: normal;
       color: #fdf46e;
       text-decoration: none;
-      background-color: #17214c;
+      background-color: #030b15;
       border-radius: 1em;
       border: 0.1em solid #00ffff;
       padding: .3em 1em; }
@@ -212,7 +269,7 @@ header {
     justify-content: space-evenly;
     margin: auto; }
     #suscripciones article .card_suscripcion {
-      background-color: #17214c;
+      background-color: #030b15;
       border-radius: 2em;
       border: 0.2em solid #00ffff;
       box-shadow: 0 0 2em #00ffff; }
@@ -246,32 +303,84 @@ header {
   #contacto picture img {
     width: 50em; }
 
-footer {
-  background-color: #17214c;
-  padding: 2em; }
-  footer p {
-    color: #ffffff;
-    margin-bottom: 0;
-    margin: 1em;
-    text-align: center; }
-  footer div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around; }
-    footer div img {
-      height: 4.5em; }
-  footer ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around; }
-    footer ul a {
-      color: #ffffff; }
-      footer ul a img {
-        width: 3em;
-        height: auto; }
+#rey_master {
+  background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #rey_master picture img {
+    height: 60em; }
 
-/* responsive a 320px*/
+#contenido picture img {
+  width: 60em; }
+
+footer {
+  background-color: #030b15;
+  width: 100%;
+  margin-bottom: 0; }
+  footer .contenedor_info_footer {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 1em .5em; }
+    footer .contenedor_info_footer .marca_redes {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+      width: 70%; }
+      footer .contenedor_info_footer .marca_redes_article {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        footer .contenedor_info_footer .marca_redes_article_figure {
+          height: 4em;
+          width: auto;
+          overflow: hidden; }
+          footer .contenedor_info_footer .marca_redes_article_figure img {
+            height: 5em;
+            width: auto; }
+        footer .contenedor_info_footer .marca_redes_article_caption {
+          color: #ffffff;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 300;
+          font-size: 1em; }
+      footer .contenedor_info_footer .marca_redes_lista {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly; }
+        footer .contenedor_info_footer .marca_redes_lista_item a img {
+          width: auto;
+          height: 2em;
+          margin: 0 .3em; }
+    footer .contenedor_info_footer .legales {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: auto; }
+      footer .contenedor_info_footer .legales li {
+        margin: 1em 1em; }
+        footer .contenedor_info_footer .legales li a {
+          color: #ffffff;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 200;
+          font-size: 1em; }
+    footer .contenedor_info_footer > p {
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1em;
+      font-weight: 200;
+      margin-top: 1em;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; }
+
 @keyframes aparecer {
   0% {
     opacity: 0; }
@@ -290,6 +399,22 @@ footer {
   50% {
     opacity: 1; }
   75% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1; }
+  3% {
+    opacity: 0; }
+  6% {
+    opacity: 1; }
+  9% {
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  50% {
     opacity: 1; }
   100% {
     opacity: 1; } }
