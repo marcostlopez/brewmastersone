@@ -1,4 +1,8 @@
 #envio{
+    background-image: url(../../public/backgrounds/gareth_david_desktop_neon_cianviolet.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     & h2{
         font-family: $font-primary;
         color: $secondary;
@@ -26,7 +30,7 @@
 }
 
 #birras{
-    background-image: url(../public/backgrounds/gareth_david_neon_violet.jpg);
+    background-image: url(../../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     & article{

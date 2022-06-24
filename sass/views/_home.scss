@@ -1,5 +1,5 @@
 #home{
-    background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
+    background-image: url(../public/backgrounds/gareth_david_desktop_neon_cian.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 5.6em;
@@ -7,53 +7,142 @@
     & .hero{
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
         align-items: center;
-        margin: 2em auto;
-        width: 90%;
-        & .hero_imagen img{
-            height: 60em;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto;
+
+        &_imagen{
+            margin-bottom: 0;
+            & img{
+                height: 60em;
+            }
         }
-        & .hero_data{
+
+        &_data{
+            width: 45em;
             & h2{
-                color: #ffffff;
                 font-family: $font-primary;
-                font-weight: 400;
-                font-size: 5em;
-                width: 9em;
-                margin-bottom: 0;
+                font-size: 4.5em;
+                font-weight: 700;
+                color: $fourth;
+                margin-bottom: .2em;
                 & em{
                     font-weight: 900;
+                    font-style: normal;
+                    text-transform: uppercase;
+                }
+            }
+            & h4{
+                font-family: $font-primary;
+                font-size: 1.8em;
+                font-weight: 400;
+                color: $secondary;
+                margin-bottom: 2em;
+                & em{
+                    font-weight: 800;
                     font-style: normal;
                 }
             }
 
-            & h3{
-                color: #99feff;
-                font-family: $font-primary;
-                font-weight: 600;
-                font-size: 1.8em;
-                margin-bottom: 3em;
-                margin-top: 2em;
-                width: 40rem;
-                &>em{
-                    font-weight: 700;
-                    font-style: normal;
-                    font-variant: small-caps;
-                }
-            }
-            & .botones{
-                font-family: $font-primary;
-                font-size: 2.4em;
-                font-weight: 800;
-                font-style: normal;
-                color: $fifth;
+            .botones{
                 text-decoration: none;
+                text-align: center;
+                width: 8em;
+                display: block;
+                color: $fifth;
+                font-family: $font-primary;
+                font-size: 2em;
+                font-weight: 700;
                 background-color: $principal;
                 border-radius: 1em;
-                border: .1em solid $secondary;
-                padding: .3em 1em ;
+                padding: .2em .5em;
+                border: .2em outset $fifth;
+                transition: .8s;
+
+                &:hover{
+                    box-shadow: 0em 0em .5em $secondary;
+                }
             }
+        }
+    }
+}
+
+/*RESPONSIVE 1080*/
+@media screen and(max-width: 1080px){
+    #home .hero .hero_imagen img{
+        height: 50em;
+    }
+    #home .hero .hero_data{
+        width: 35em;
+        & h2{
+            font-size: 3.5em;
+        }
+        & h4{
+            font-size: 1.4em;
+        }
+        .botones{
+            font-size: 1.8em;
+        }
+    }
+}
+
+/*RESPONSIVE 980*/
+@media screen and(max-width: 980px){
+    #home .hero .hero_imagen img{
+        height: 40em;
+    }
+    #home .hero .hero_data{
+        width: 30em;
+        & h2{
+            font-size: 3em;
+        }
+        & h4{
+            font-size: 1.2em;
+        }
+        .botones{
+            font-size: 1.4em;
+        }
+    }
+}
+
+/*RESPONSIVE 702*/
+@media screen and(max-width: 702px){
+    #home{
+        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+    }
+    #home .hero .hero_imagen img{
+        height: 40em;
+    }
+    #home .hero .hero_data{
+        width: 30em;
+        padding-bottom: 1.5em;
+        & h2{
+            font-size: 3em;
+            text-align: center;
+        }
+        & h4{
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+        .botones{
+            text-align: center;
+            margin: auto;
+            font-size: 1.6em;
+        }
+    }
+}
+
+/*RESPONSIVE 420*/
+@media screen and(max-width: 420px){
+    #home{
+        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        & .hero .hero_imagen img{
+            height: 30em;
         }
     }
 }

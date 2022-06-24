@@ -43,6 +43,43 @@ ul {
   text-shadow: .2em .2em 2em #00ffff;
   margin: 0px 25px 0px 25px; }
 
+::web-kit-scrollbar {
+  width: 0; }
+
+#scrollPath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.05); }
+
+#progressbar {
+  position: fixed;
+  top: 7em;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to top, #00ffff, #9a39ca);
+  animation: animate 5s linear infinite; }
+  #progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00ffff, #9a39ca);
+    filter: blur(10px); }
+  #progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #00ffff, #9a39ca);
+    filter: blur(30px); }
+
 .header {
   background-color: #030b15;
   z-index: 1;
@@ -90,7 +127,6 @@ ul {
       .header .contenedor_menu_header #navbar .nav-menu {
         display: flex;
         flex-direction: row;
-        margin-right: 4em;
         margin-bottom: 0; }
         .header .contenedor_menu_header #navbar .nav-menu-item {
           margin: 0 1em; }
@@ -142,77 +178,144 @@ ul {
       left: 0%; } }
 
 #home {
-  background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
+  background-image: url(../public/backgrounds/gareth_david_desktop_neon_cian.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 5.6em; }
   #home .hero {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
-    margin: 2em auto;
-    width: 90%; }
-    #home .hero .hero_imagen img {
-      height: 60em; }
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto; }
+    #home .hero_imagen {
+      margin-bottom: 0; }
+      #home .hero_imagen img {
+        height: 60em; }
+    #home .hero_data {
+      width: 45em; }
+      #home .hero_data h2 {
+        font-family: "Nunito", serif;
+        font-size: 4.5em;
+        font-weight: 700;
+        color: #9ffcfd;
+        margin-bottom: .2em; }
+        #home .hero_data h2 em {
+          font-weight: 900;
+          font-style: normal;
+          text-transform: uppercase; }
+      #home .hero_data h4 {
+        font-family: "Nunito", serif;
+        font-size: 1.8em;
+        font-weight: 400;
+        color: #00ffff;
+        margin-bottom: 2em; }
+        #home .hero_data h4 em {
+          font-weight: 800;
+          font-style: normal; }
+      #home .hero_data .botones {
+        text-decoration: none;
+        text-align: center;
+        width: 8em;
+        display: block;
+        color: #fdf46e;
+        font-family: "Nunito", serif;
+        font-size: 2em;
+        font-weight: 700;
+        background-color: #030b15;
+        border-radius: 1em;
+        padding: .2em .5em;
+        border: 0.2em outset #fdf46e;
+        transition: .8s; }
+        #home .hero_data .botones:hover {
+          box-shadow: 0em 0em 0.5em #00ffff; }
+
+/*RESPONSIVE 1080*/
+@media screen and (max-width: 1080px) {
+  #home .hero .hero_imagen img {
+    height: 50em; }
+  #home .hero .hero_data {
+    width: 35em; }
     #home .hero .hero_data h2 {
+      font-size: 3.5em; }
+    #home .hero .hero_data h4 {
+      font-size: 1.4em; }
+    #home .hero .hero_data .botones {
+      font-size: 1.8em; } }
+
+/*RESPONSIVE 980*/
+@media screen and (max-width: 980px) {
+  #home .hero .hero_imagen img {
+    height: 40em; }
+  #home .hero .hero_data {
+    width: 30em; }
+    #home .hero .hero_data h2 {
+      font-size: 3em; }
+    #home .hero .hero_data h4 {
+      font-size: 1.2em; }
+    #home .hero .hero_data .botones {
+      font-size: 1.4em; } }
+
+/*RESPONSIVE 702*/
+@media screen and (max-width: 702px) {
+  #home {
+    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cian.jpg); }
+  #home .hero .hero_imagen img {
+    height: 40em; }
+  #home .hero .hero_data {
+    width: 30em;
+    padding-bottom: 1.5em; }
+    #home .hero .hero_data h2 {
+      font-size: 3em;
+      text-align: center; }
+    #home .hero .hero_data h4 {
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 1.5em; }
+    #home .hero .hero_data .botones {
+      text-align: center;
+      margin: auto;
+      font-size: 1.6em; } }
+
+/*RESPONSIVE 420*/
+@media screen and (max-width: 420px) {
+  #home {
+    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #home .hero .hero_imagen img {
+      height: 30em; } }
+
+#envio {
+  background-image: url(../../public/backgrounds/gareth_david_desktop_neon_cianviolet.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #envio h2 {
+    font-family: "Nunito", serif;
+    color: #00ffff;
+    text-align: center; }
+  #envio article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1em; }
+    #envio article .card_envio picture img {
+      width: 25em; }
+    #envio article .card_envio_descripcion {
       color: #ffffff;
       font-family: "Nunito", serif;
-      font-weight: 400;
-      font-size: 5em;
-      width: 9em;
-      margin-bottom: 0; }
-      #home .hero .hero_data h2 em {
-        font-weight: 900;
-        font-style: normal; }
-    #home .hero .hero_data h3 {
-      color: #99feff;
-      font-family: "Nunito", serif;
-      font-weight: 600;
       font-size: 1.8em;
-      margin-bottom: 3em;
-      margin-top: 2em;
-      width: 40rem; }
-      #home .hero .hero_data h3 > em {
-        font-weight: 700;
-        font-style: normal;
-        font-variant: small-caps; }
-    #home .hero .hero_data .botones {
-      font-family: "Nunito", serif;
-      font-size: 2.4em;
-      font-weight: 800;
-      font-style: normal;
-      color: #fdf46e;
-      text-decoration: none;
-      background-color: #030b15;
-      border-radius: 1em;
-      border: 0.1em solid #00ffff;
-      padding: .3em 1em; }
-
-#envio h2 {
-  font-family: "Nunito", serif;
-  color: #00ffff;
-  text-align: center; }
-
-#envio article {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 1em; }
-  #envio article .card_envio picture img {
-    width: 25em; }
-  #envio article .card_envio_descripcion {
-    color: #ffffff;
-    font-family: "Nunito", serif;
-    font-size: 1.8em;
-    font-weight: 600;
-    text-align: center;
-    width: 10em;
-    margin: auto; }
+      font-weight: 600;
+      text-align: center;
+      width: 10em;
+      margin: auto; }
 
 #birras {
-  background-image: url(../public/backgrounds/gareth_david_neon_violet.jpg);
+  background-image: url(../../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
   #birras article {
@@ -272,7 +375,7 @@ ul {
     padding: .8em; }
 
 #suscripciones {
-  background-image: url(../public/backgrounds/gareth_david_neon_violet.jpg);
+  background-image: url(../../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 6.5em;
@@ -348,12 +451,48 @@ ul {
       #suscripciones article .card_suscripcion:hover {
         transform: translateY(-5%); }
 
-#contacto {
-  background-image: url(../public/backgrounds/gareth_david_neon_orange.jpg);
+#nosotros {
+  background-image: url(../../public/backgrounds/gareth_david_neon_violet.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
-  #contacto picture img {
-    width: 50em; }
+  #nosotros h2 {
+    color: #00ffff;
+    font-family: "Nunito", serif;
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+    margin: 1em auto; }
+  #nosotros .contenedor_fundadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto; }
+    #nosotros .contenedor_fundadores figure img {
+      width: 65em; }
+    #nosotros .contenedor_fundadores div img {
+      width: 30em; }
+
+#contacto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-image: url(../../public/backgrounds/gareth_david_desktop_neon_orange.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  #contacto .imgform {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    max-width: 1200px; }
+    #contacto .imgform picture img {
+      height: 45em; }
+    #contacto .imgform form {
+      width: 40em;
+      background-color: #030b15;
+      border-radius: 1em; }
 
 #rey_master {
   background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);
@@ -491,3 +630,10 @@ footer {
   100% {
     opacity: 0;
     z-index: -1; } }
+
+@keyframes animate {
+  0%,
+  100% {
+    filter: hue-rotate(0deg); }
+  50% {
+    filter: hue-rotate(360deg); } }

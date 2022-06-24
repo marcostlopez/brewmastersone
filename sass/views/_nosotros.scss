@@ -1,0 +1,29 @@
+#nosotros{
+    background-image: url(../../public/backgrounds/gareth_david_neon_violet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & h2{
+        color: $secondary;
+        font-family: $font-primary;
+        font-size: 3em;
+        font-weight: 800;
+        text-align: center;
+        margin: 1em auto;
+    }
+
+    & .contenedor_fundadores{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+
+        & figure img{
+            width: 65em;
+        }
+
+        & div img{
+            width: 30em;
+        }
+    }
+}

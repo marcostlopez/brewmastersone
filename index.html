@@ -103,6 +103,9 @@
     
     <main>
 
+        <div id="progressbar"></div>
+        <div id="scrollPath"></div>
+
         <div id="presentacion">
             <h1>
                 Brewmasters Club
@@ -122,10 +125,10 @@
                     <h2>
                         Disfruta de recibir <em>tu cajita feliz</em> en la puerta de tu casa
                     </h2>
-                    <h3>
+                    <h4>
                         Seis latas de las mejores cervezas artesanales especialmente seccionadas
                         <em>para vos</em>
-                    </h3>
+                    </h4>
                     <a class="botones" href="#suscripciones">
                         EMPEZAR
                     </a>
@@ -135,10 +138,10 @@
 
         </section>
 
-        <section id="envio">
-            <h2>
+        <!-- <section id="envio">
+            <h3>
                 ¿Como funciona Brewmasters?
-            </h2>
+            </h3>
             <article>
                 <div class="card_envio">
                     <picture>
@@ -165,9 +168,9 @@
                     </p>
                 </div>
             </article>
-        </section>
+        </section> -->
 
-        <section id="birras">
+        <!-- <section id="birras">
             <article>
                 <div>
                     <picture>
@@ -204,9 +207,9 @@
                     </ul>
                 </div>
             </article>
-        </section>
+        </section> -->
 
-        <section id="marcas">
+        <!-- <section id="marcas">
             <div class="marcas_contenedor">
                 <ul>
                     <li class="marcas_logos">
@@ -265,9 +268,9 @@
 
                 </ul>
             </div>
-        </section>
+        </section> -->
 
-        <section id="suscripciones">
+        <!-- <section id="suscripciones">
             <h2>
                 ELEGI TU MEJOR PLAN
             </h2>
@@ -340,21 +343,23 @@
                 </div>
             </article>
 
-        </section>
+        </section> -->
 
-        <section id="nosotros">
+        <!-- <section id="nosotros">
             <h2>
                 Somos Brewmasters
             </h2>
 
-            <article>
-                <img src="./public/imagenes/nosotros_sol_cravello_fundadores.jpg"
+            <article class="contenedor_fundadores">
+                <figure>
+                    <img src="./public/imagenes/nosotros_sol_cravello_fundadores.jpg"
                     alt="Sol Cravello y fundadores de brewmasters">
+                </figure>
                 <div>
                     <img src="./public/ilustraciones/birra_amor_neon.png" alt=" cerveza neon">
                     <div>
                         <p>
-                            toda la info de la suscripcion
+                            <a href="#">Sol Cravello</a> Junto a dos amigos,  
                         </p>
                         <a href="#suscripciones">SUSCRIBIRSE</a>
                     </div>
@@ -366,75 +371,65 @@
                 Unite a la comunidad de brewmasters
             </h3>
 
-            <article class="gallery">
-                <figure>
-                    <img src="./public/imagenes/camylla-battani_salud.jpg" alt="salud brindis entre latas">
-                </figure>
-                <figure>
-                    <img src="./public/imagenes/papo_fermentado_chica_con_lata.jpg" alt="chica con lata en mano">
-                </figure>
-                <figure>
-                    <img src="./public/imagenes/monica_di_loxley_lata_en_rostro.jpg" alt="chica con lata en el rostro">
-                </figure>
-            </article>
-
-        </section>
+        </section> -->
 
         <!-- <section id="contacto">
-            <h2>Contacto</h2>
+            <h2>Charlemos</h2>
 
-            <picture>
-                <img src="./public/ilustraciones/cheers_contact.png" alt="salud, contactanos">
-            </picture>
+            <div class="imgform">
+                <picture>
+                    <img src="./public/ilustraciones/cheers_contact.png" alt="salud, contactanos">
+                </picture>
 
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputname">Nombre</label>
+                            <input type="name" class="form-control" id="inputname" placeholder="Nombre">
+                        </div>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputname">Nombre</label>
-                        <input type="name" class="form-control" id="inputname" placeholder="Nombre">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
                     </div>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputAddress2">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2"
-                        placeholder="Apartment, studio, or floor">
-                </div>
-                <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
                     </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Check me out
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            Check me out
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+            </div>
+            
         </section> -->
 
     </main>
@@ -507,6 +502,15 @@
                 </li>
                 <li>
                     <img src="./public/icons/paypal.png" alt="pay pal">
+                </li>
+                <li>
+                    <img src="./public/icons/mercadopago.png" alt="mercado pago">
+                </li>
+                <li>
+                    <img src="./public/icons/pagofacil.png" alt="pago facil">
+                </li>
+                <li>
+                    <img src="./public/icons/rapipago.png" alt="rapipago">
                 </li>
             </ul>
 

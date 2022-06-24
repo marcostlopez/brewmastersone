@@ -1,8 +1,26 @@
 #contacto{
-    background-image: url(../public/backgrounds/gareth_david_neon_orange.jpg);
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-image: url(../../public/backgrounds/gareth_david_desktop_neon_orange.jpg);
     background-size: cover;
-    & picture img{
-        width: 50em;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .imgform{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: auto;
+        max-width: 1200px;
+        & picture img{
+            height: 45em;
+        }
+        & form{
+            width: 40em;
+            background-color: $principal;
+            border-radius: 1em;
+        }
     }
 }
