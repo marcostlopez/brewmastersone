@@ -1,15 +1,20 @@
 #nosotros{
-    background-image: url(../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../public/backgrounds/gareth_david_desktop_neon_violetcian.jpg);
+    background-repeat: repeat;
     background-size: cover;
+    background-position: center;
+    padding-top: 6.5em;
+    padding-bottom: 6.5em;
 
     & h2{
         color: $secondary;
         font-family: $font-primary;
         font-size: 3em;
-        font-weight: 800;
+        font-weight: 700;
         text-align: center;
-        margin: 1em auto;
+        margin: auto auto 1em auto;
+        padding-top: 2em;
+        padding: .5em;
     }
 
     & .contenedor_fundadores{
@@ -17,53 +22,164 @@
         flex-direction: column;
         align-items: center;
         margin: auto;
-
-        & figure img{
-            width: 65em;
+        max-width: 1200px;
+        & figure{
+            box-shadow: 0em .1em .5em $secondary;
+            & img{
+                width: 78em;
+            }
         }
 
-        & div img{
-            width: 30em;
+        & div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 80em;
+
+            & img{
+                width: 25em;
+            }
+
+            & .texto_fundadores{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                & p{
+                    text-align: left;
+                    font-family: $font-primary;
+                    font-size: 1.6em;
+                    font-weight: 300;
+                    color: #ffffff;
+                    width: 33em;
+
+                    &>a{
+                        color: $thirdly;
+                        font-weight: 500;
+                    }
+                }
+                & .botones{
+                    text-decoration: none;
+                    text-align: center;
+                    width: 8em;
+                    display: block;
+                    color: $fifth;
+                    font-family: $font-primary;
+                    font-size: 1.7em;
+                    font-weight: 700;
+                    background-color: $principal;
+                    border-radius: 1em;
+                    padding: .2em .5em;
+                    border: .2em outset $fifth;
+                    transition: .8s;
+                    margin: .5em;
+
+                    &:hover{
+                        box-shadow: 0em 0em .5em $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#comunidad{
+    background-image: url(../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    & h3{
+        font-family: $font-primary;
+        color: $fifth;
+        font-size: 2.5em;
+        padding-top: .5em;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    & h4{
+        color: #ffffff;
+        text-align: center;
+        font-family: $font-primary;
+        font-size: 1.8em;
+        font-weight: 400;
+        & a{
+            color: $secondary;
+            font-weight: 600;
+            font-size: 1.8rem;
+            font-family: $font-primary;
         }
     }
 
     & .carrousel{
-        width: 70%;
+        width: 60%;
+        height: 55em;
         max-width: 120em;
-        background-color: lightblue;
-        padding: 2em;
+        // padding: 2em;
         margin: auto;
         overflow-x: hidden;
 
+
         .grande{
             width: 300%;
-            background-color: orange;
+            // background-color: orange;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
             align-items: center;
-            padding: 2em;
+            padding-top: 1em;
         
             transition: all .5s ease;
             transform: translateX(0%);
 
             .img{
                 width: calc( 100% / 3 );
-                background-color: lime;
+                // background-color: lime;
                 min-height: 25em;
-                margin: 1em;
+                height: 44em;
+                margin: .5em;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                &:first-child>a img{
+                    width: 25.5em;
+                }
+                &:last-child a img{
+                    width: 20em;
+                    height: auto;
+                }
+                &>div{
+                    display: flex;
+                    flex-direction: column;
+                }
+                & a{
+                    text-decoration: none;
+                    margin: 0;
+                    text-align: center;
+                    & img{
+                        width: 25em;
+                        margin: .5em;
+                        padding: 2em .5em;
+                        background-color: #ffffff;
+                        border-radius: .8em;
+                        transition: 1s;
 
-                a img{
-                    width: 12em;
+                        &:hover{
+                            box-shadow: 0em 0em .3em $secondary;
+                            transform: scale(115%);
+                        }
+                    }
                 }
             }
         }
 
         .puntos{
             width: 100%;
-            background-color: darkred;
-            padding: .4em;
+            // background-color: darkred;
+            padding: 0em;
             list-style: none;
             display: flex;
             flex-direction: row;
@@ -73,16 +189,32 @@
 
             .punto{
                 background-color: $principal;
-                height: 2em;
-                width: 2em;
+                height: 1.8em;
+                width: 1.8em;
                 margin: 1em;
                 border-radius: 100%;
 
                 &.activo{
                     background-color: $fifth;
-                    box-shadow: 0em 0em .5em $principal;
+                    box-shadow: 0em 0em .5em $secondary;
                 }
             }
         }
     }
+}
+
+@media screen and(max-widht: 1080px) {
+    
+}
+
+@media screen and(max-widht: 980px) {
+    
+}
+
+@media screen and(max-widht: 702px) {
+    
+}
+
+@media screen and(max-widht: 420px) {
+    
 }

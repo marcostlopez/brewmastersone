@@ -188,7 +188,8 @@ ul {
   background-image: url(../public/backgrounds/gareth_david_desktop_neon_cian.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 5.6em; }
+  padding-top: 6.5em;
+  padding-bottom: 6.5em; }
   #home .hero {
     display: flex;
     flex-direction: row;
@@ -467,6 +468,7 @@ ul {
   background-image: url(../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding-top: 6.5em;
   padding-bottom: 6.5em; }
   #suscripciones h2 {
@@ -475,7 +477,8 @@ ul {
     font-weight: 700;
     font-size: 3em;
     margin: auto auto 1em auto;
-    text-align: center; }
+    text-align: center;
+    padding: .5em; }
   #suscripciones article {
     display: flex;
     flex-direction: row;
@@ -492,7 +495,8 @@ ul {
       flex-direction: column;
       margin: auto;
       transition: ease-in-out 1s;
-      width: 27em; }
+      width: 27em;
+      height: 52em; }
       #suscripciones article .card_suscripcion figure img {
         height: 25em;
         margin: auto;
@@ -550,73 +554,174 @@ ul {
         transform: translateY(-5%); }
 
 /*RESPONSIVE 1080*/
+@media screen and (max-width: 1080px) {
+  #suscripciones h2 {
+    margin: auto auto 1.5em auto; }
+  #suscripciones article .card_suscripcion {
+    width: 25em;
+    height: 50em; } }
+
 /*RESPONSIVE 980*/
 /*RESPONSIVE 702*/
+@media screen and (max-width: 702px) {
+  #suscripciones {
+    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_violet.jpg); } }
+
 /*RESPONSIVE 420*/
 #nosotros {
-  background-image: url(../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-image: url(../public/backgrounds/gareth_david_desktop_neon_violetcian.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 6.5em;
+  padding-bottom: 6.5em; }
   #nosotros h2 {
     color: #00ffff;
     font-family: "Nunito", serif;
     font-size: 3em;
-    font-weight: 800;
+    font-weight: 700;
     text-align: center;
-    margin: 1em auto; }
+    margin: auto auto 1em auto;
+    padding-top: 2em;
+    padding: .5em; }
   #nosotros .contenedor_fundadores {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto; }
-    #nosotros .contenedor_fundadores figure img {
-      width: 65em; }
-    #nosotros .contenedor_fundadores div img {
-      width: 30em; }
-  #nosotros .carrousel {
-    width: 70%;
+    margin: auto;
+    max-width: 1200px; }
+    #nosotros .contenedor_fundadores figure {
+      box-shadow: 0em 0.1em 0.5em #00ffff; }
+      #nosotros .contenedor_fundadores figure img {
+        width: 78em; }
+    #nosotros .contenedor_fundadores div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      width: 80em; }
+      #nosotros .contenedor_fundadores div img {
+        width: 25em; }
+      #nosotros .contenedor_fundadores div .texto_fundadores {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; }
+        #nosotros .contenedor_fundadores div .texto_fundadores p {
+          text-align: left;
+          font-family: "Nunito", serif;
+          font-size: 1.6em;
+          font-weight: 300;
+          color: #ffffff;
+          width: 33em; }
+          #nosotros .contenedor_fundadores div .texto_fundadores p > a {
+            color: #ff614d;
+            font-weight: 500; }
+        #nosotros .contenedor_fundadores div .texto_fundadores .botones {
+          text-decoration: none;
+          text-align: center;
+          width: 8em;
+          display: block;
+          color: #fdf46e;
+          font-family: "Nunito", serif;
+          font-size: 1.7em;
+          font-weight: 700;
+          background-color: #030b15;
+          border-radius: 1em;
+          padding: .2em .5em;
+          border: 0.2em outset #fdf46e;
+          transition: .8s;
+          margin: .5em; }
+          #nosotros .contenedor_fundadores div .texto_fundadores .botones:hover {
+            box-shadow: 0em 0em 0.5em #00ffff; }
+
+#comunidad {
+  background-image: url(../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
+  background-repeat: repeat;
+  background-size: cover; }
+  #comunidad h3 {
+    font-family: "Nunito", serif;
+    color: #fdf46e;
+    font-size: 2.5em;
+    padding-top: .5em;
+    font-weight: 700;
+    text-align: center; }
+  #comunidad h4 {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Nunito", serif;
+    font-size: 1.8em;
+    font-weight: 400; }
+    #comunidad h4 a {
+      color: #00ffff;
+      font-weight: 600;
+      font-size: 1.8rem;
+      font-family: "Nunito", serif; }
+  #comunidad .carrousel {
+    width: 60%;
+    height: 55em;
     max-width: 120em;
-    background-color: lightblue;
-    padding: 2em;
     margin: auto;
     overflow-x: hidden; }
-    #nosotros .carrousel .grande {
+    #comunidad .carrousel .grande {
       width: 300%;
-      background-color: orange;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
-      padding: 2em;
+      padding-top: 1em;
       transition: all .5s ease;
       transform: translateX(0%); }
-      #nosotros .carrousel .grande .img {
+      #comunidad .carrousel .grande .img {
         width: calc( 100% / 3);
-        background-color: lime;
         min-height: 25em;
-        margin: 1em; }
-        #nosotros .carrousel .grande .img a img {
-          width: 12em; }
-    #nosotros .carrousel .puntos {
+        height: 44em;
+        margin: .5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        #comunidad .carrousel .grande .img:first-child > a img {
+          width: 25.5em; }
+        #comunidad .carrousel .grande .img:last-child a img {
+          width: 20em;
+          height: auto; }
+        #comunidad .carrousel .grande .img > div {
+          display: flex;
+          flex-direction: column; }
+        #comunidad .carrousel .grande .img a {
+          text-decoration: none;
+          margin: 0;
+          text-align: center; }
+          #comunidad .carrousel .grande .img a img {
+            width: 25em;
+            margin: .5em;
+            padding: 2em .5em;
+            background-color: #ffffff;
+            border-radius: .8em;
+            transition: 1s; }
+            #comunidad .carrousel .grande .img a img:hover {
+              box-shadow: 0em 0em 0.3em #00ffff;
+              transform: scale(115%); }
+    #comunidad .carrousel .puntos {
       width: 100%;
-      background-color: darkred;
-      padding: .4em;
+      padding: 0em;
       list-style: none;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center; }
-      #nosotros .carrousel .puntos .punto {
+      #comunidad .carrousel .puntos .punto {
         background-color: #030b15;
-        height: 2em;
-        width: 2em;
+        height: 1.8em;
+        width: 1.8em;
         margin: 1em;
         border-radius: 100%; }
-        #nosotros .carrousel .puntos .punto.activo {
+        #comunidad .carrousel .puntos .punto.activo {
           background-color: #fdf46e;
-          box-shadow: 0em 0em 0.5em #030b15; }
+          box-shadow: 0em 0em 0.5em #00ffff; }
 
 #contacto {
   display: flex;
@@ -625,7 +730,17 @@ ul {
   background-image: url(../public/backgrounds/gareth_david_desktop_neon_orange.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  padding-top: 6.5em;
+  padding-bottom: 3.5em; }
+  #contacto h2 {
+    color: #00ffff;
+    font-family: "Nunito", serif;
+    font-weight: 700;
+    font-size: 3em;
+    margin: auto auto 1em auto;
+    text-align: center;
+    padding: .5em; }
   #contacto .imgform {
     display: flex;
     flex-direction: row;
@@ -638,7 +753,74 @@ ul {
     #contacto .imgform form {
       width: 40em;
       background-color: #030b15;
-      border-radius: 1em; }
+      border-radius: 1em;
+      box-shadow: 0em 0em 2em #00ffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding: 4em 3em; }
+      #contacto .imgform form .form-row {
+        margin: auto; }
+      #contacto .imgform form .form-group {
+        width: 30em;
+        margin: auto; }
+        #contacto .imgform form .form-group .form-check {
+          margin: auto; }
+          #contacto .imgform form .form-group .form-check > label {
+            font-family: "Nunito", serif;
+            font-size: 1em;
+            color: #ffffff;
+            font-weight: 400; }
+      #contacto .imgform form .form-group > label {
+        font-family: "Nunito", serif;
+        color: #fdf46e;
+        font-weight: 400;
+        font-size: 1.4em; }
+      #contacto .imgform form .form-control {
+        display: block;
+        width: 100%;
+        padding: 0.3rem 0.7rem;
+        font-family: #00ffff;
+        font-style: italic;
+        font-size: 1.2em;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 1em;
+        color: #030b15;
+        background-color: #ffffff;
+        border: 1px solid #00ffff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.3rem;
+        transition: border-color .5s ease-in-out,box-shadow .15s ease-in-out; }
+      #contacto .imgform form .botones {
+        text-decoration: none;
+        text-align: center;
+        width: 8em;
+        display: block;
+        color: #fdf46e;
+        font-family: "Nunito", serif;
+        font-size: 1.7em;
+        font-weight: 700;
+        background-color: #030b15;
+        border-radius: 1em;
+        padding: .2em .5em;
+        border: 0.2em outset #fdf46e;
+        transition: .8s;
+        margin: auto; }
+        #contacto .imgform form .botones:hover {
+          box-shadow: 0em 0em 0.5em #00ffff; }
+
+@media screen and (max-width: 420px) {
+  .imgform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+    .imgform picture img {
+      display: none; } }
 
 #rey_master {
   background-image: url(../public/backgrounds/gareth_david_neon_cian.jpg);

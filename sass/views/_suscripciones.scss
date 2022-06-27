@@ -2,6 +2,7 @@
     background-image: url(../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding-top: 6.5em;
     padding-bottom: 6.5em;
     & h2{
@@ -11,6 +12,7 @@
         font-size: 3em;
         margin: auto auto 1em auto;
         text-align: center;
+        padding: .5em;
     }
     & article{
         display: flex;
@@ -29,6 +31,7 @@
             margin: auto;
             transition: ease-in-out 1s;
             width: 27em;
+            height: 52em;
 
             & figure img{
                 height: 25em;
@@ -104,7 +107,15 @@
 
 /*RESPONSIVE 1080*/
 @media screen and(max-width: 1080px){
-
+    #suscripciones {
+        & h2{
+        margin: auto auto 1.5em auto;
+        }
+        & article .card_suscripcion{
+            width: 25em;
+            height: 50em;
+        }
+    }
 }
 
 /*RESPONSIVE 980*/
@@ -114,6 +125,9 @@
 
 /*RESPONSIVE 702*/
 @media screen and(max-width: 702px){
+    #suscripciones{
+        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+    }
     
 }
 
