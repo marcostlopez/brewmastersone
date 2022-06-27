@@ -19,3 +19,24 @@ window.onscroll = function(){
 	let progressHeight = (window.pageYOffset / totalHeight) * 100;
 	progress.style.height = progressHeight + "%";
 }
+
+//carrousel 
+const grande  =document.querySelector('.grande')
+const punto   =document.querySelectorAll('.punto')
+
+//carrousel y puntos para 3 divisiones
+
+punto.forEach( ( cadaPunto , i )=> {
+	punto[i].addEventListener('click',()=>{
+
+		let posicion = i
+		let operacion = posicion * -33
+
+		grande.style.transform = `translateX(${ operacion }%)`
+
+		punto.forEach(( cadaPunto , i )=>{
+			punto[i].classList.remove('activo')
+		})
+		punto[i].classList.add('activo')
+	})
+})

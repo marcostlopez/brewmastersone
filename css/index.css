@@ -21,7 +21,7 @@ ul {
   padding: 0; }
 
 #presentacion {
-  background-color: #17214c;
+  background-color: #030b15;
   position: absolute;
   z-index: 100;
   top: 0;
@@ -30,17 +30,24 @@ ul {
   right: 0;
   height: 100vh;
   width: 100%;
-  animation: carga ease 3s;
+  animation: carga ease-in-out 4.7s;
   animation-fill-mode: forwards; }
+  #presentacion img {
+    height: 8em;
+    margin: auto;
+    display: block;
+    animation-name: parpadeo;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-iteration-count: initial; }
 
 #presentacion h1 {
   text-align: center;
   padding-top: 350px;
-  color: #00ffff;
+  color: #9ffcfd;
   font-family: "Nunito", serif;
-  font-weight: 400;
-  font-size: 4em;
-  text-shadow: .2em .2em 2em #00ffff;
+  font-weight: 700;
+  font-size: 3em;
   margin: 0px 25px 0px 25px; }
 
 ::web-kit-scrollbar {
@@ -116,7 +123,7 @@ ul {
         font-size: 1.8em;
         text-decoration: none;
         line-height: 3em;
-        opacity: 20%;
+        opacity: 30%;
         transition: 1s; }
         .header .contenedor_menu_header #navbar .nav-link .user {
           width: auto;
@@ -261,7 +268,7 @@ ul {
 /*RESPONSIVE 702*/
 @media screen and (max-width: 702px) {
   #home {
-    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cian.jpg); }
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_cian.jpg); }
   #home .hero .hero_imagen img {
     height: 40em; }
   #home .hero .hero_data {
@@ -282,7 +289,7 @@ ul {
 /*RESPONSIVE 420*/
 @media screen and (max-width: 420px) {
   #home {
-    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
     background-repeat: no-repeat;
     background-size: cover; }
     #home .hero .hero_imagen img {
@@ -293,18 +300,31 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  #envio h2 {
+  #envio h3 {
     font-family: "Nunito", serif;
-    color: #00ffff;
+    color: #fdf46e;
+    font-size: 2.5em;
+    padding-top: .5em;
+    font-weight: 700;
     text-align: center; }
   #envio article {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 1em; }
+    padding: 1em;
+    margin: auto;
+    max-width: 1200px; }
     #envio article .card_envio picture img {
       width: 25em; }
+    #envio article .card_envio picture .truck {
+      animation-name: truck;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite; }
+    #envio article .card_envio picture .openBox {
+      animation-name: rotateBox;
+      animation-duration: 3s;
+      animation-iteration-count: infinite; }
     #envio article .card_envio_descripcion {
       color: #ffffff;
       font-family: "Nunito", serif;
@@ -343,24 +363,83 @@ ul {
       #birras article div:last-child ul li picture img {
         height: 40em;
         transition: 1s;
-        opacity: 60%; }
+        opacity: 60%;
+        filter: blur(1px); }
         #birras article div:last-child ul li picture img:hover {
           transform: scale(130%) translate(0%, -10%);
-          opacity: 100%; }
+          opacity: 100%;
+          filter: blur(0px); }
 
-/*rsponsive 780*/
-@media screen and (max-width: 1100px) {
+/*RESPONSIVE 1080*/
+@media screen and (max-width: 1080px) {
+  #envio article .card_envio picture img {
+    width: 20em; }
+  #envio article .card_envio_descripcion {
+    font-size: 1.6em; }
+  #birras article div:first-child picture img {
+    height: 20em; }
   #birras article div:last-child ul li picture img {
-    height: 35em; }
-    #birras article div:last-child ul li picture img:hover {
-      transform: scale(110%) translate(0%, -5%); } }
+    height: 35em; } }
 
-@media screen and (max-width: 810px) {
-  #birras article div:last-child ul {
-    overflow-x: scroll;
-    justify-content: flex-start; }
-    #birras article div:last-child ul li picture img {
-      height: 25em; } }
+/*RESPONSIVE 980*/
+@media screen and (max-width: 980px) {
+  #birras article div:last-child ul li picture img {
+    height: 30em; } }
+
+/*RESPONSIVE 702*/
+@media screen and (max-width: 702px) {
+  #envio {
+    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cianviolet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    #envio article .card_envio picture img {
+      width: 17em; }
+    #envio article .card_envio_descripcion {
+      font-size: 1.4em; }
+  #birras {
+    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #birras article div:first-child picture img {
+      height: 10em; }
+    #birras article div:last-child ul {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      justify-content: flex-start; }
+      #birras article div:last-child ul li picture img {
+        height: 24em; }
+        #birras article div:last-child ul li picture img:hover {
+          transform: scale(105%); } }
+
+/*RESPONSIVE 420*/
+@media screen and (max-width: 420px) {
+  #envio {
+    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cianviolet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left; }
+    #envio h3 {
+      padding-top: 2em;
+      font-size: 1.8em; }
+    #envio article .card_envio picture img {
+      width: 17em; }
+    #envio article .card_envio_descripcion {
+      font-size: 1.4em; }
+  #birras {
+    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #birras article div:first-child picture img {
+      height: 10em; }
+    #birras article div:last-child ul {
+      overflow-x: scroll;
+      justify-content: flex-start;
+      padding-left: 10em; }
+      #birras article div:last-child ul li picture img {
+        height: 25em; }
+        #birras article div:last-child ul li picture img:hover {
+          transform: scale(110%) translate(0%, 1%); } }
 
 #marcas .marcas_contenedor ul {
   display: flex;
@@ -373,6 +452,16 @@ ul {
   #marcas .marcas_contenedor ul .marcas_logos a .marcas_logos_imagen {
     height: 5em;
     padding: .8em; }
+
+@media screen and (max-width: 702px) {
+  #marcas .marcas_contenedor ul .marcas_logos a .marcas_logos_imagen {
+    height: 4em;
+    padding: 0.8em; } }
+
+@media screen and (max-width: 420px) {
+  #marcas .marcas_contenedor ul .marcas_logos a .marcas_logos_imagen {
+    height: 3em;
+    padding: 0.5em; } }
 
 #suscripciones {
   background-image: url(../../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
@@ -402,9 +491,12 @@ ul {
       display: flex;
       flex-direction: column;
       margin: auto;
-      transition: ease-in-out 1s; }
+      transition: ease-in-out 1s;
+      width: 27em; }
       #suscripciones article .card_suscripcion figure img {
-        height: 30em; }
+        height: 25em;
+        margin: auto;
+        display: block; }
       #suscripciones article .card_suscripcion article {
         display: flex;
         flex-direction: column;
@@ -429,30 +521,40 @@ ul {
           font-weight: 400;
           font-style: normal;
           font-size: 4em;
-          text-align: center; }
-        #suscripciones article .card_suscripcion article .boton_sub {
+          text-align: center;
+          margin-bottom: 0; }
+        #suscripciones article .card_suscripcion article .botones {
+          text-decoration: none;
+          text-align: center;
+          width: 8em;
+          display: block;
+          color: #fdf46e;
+          font-family: "Nunito", serif;
+          font-size: 1.7em;
+          font-weight: 700;
           background-color: #030b15;
-          border: none;
-          box-shadow: 0.2em 0.2em 0.5em #fdf46e;
-          border-radius: .3em;
-          padding: .5em; }
-          #suscripciones article .card_suscripcion article .boton_sub a {
-            font-family: "Nunito", serif;
-            font-weight: 600;
-            font-size: 1.6em;
-            text-decoration: none;
-            color: #fdf46e; }
+          border-radius: 1em;
+          padding: .2em .5em;
+          border: 0.2em outset #fdf46e;
+          transition: .8s;
+          margin: .5em; }
+          #suscripciones article .card_suscripcion article .botones:hover {
+            box-shadow: 0em 0em 0.5em #00ffff; }
         #suscripciones article .card_suscripcion article > a {
           color: #ffffff;
           font-family: "Nunito", serif;
           font-weight: 400;
-          font-size: 1em;
-          margin: 1em auto; }
+          font-size: 1.6em;
+          margin: .6em auto 1em auto; }
       #suscripciones article .card_suscripcion:hover {
         transform: translateY(-5%); }
 
+/*RESPONSIVE 1080*/
+/*RESPONSIVE 980*/
+/*RESPONSIVE 702*/
+/*RESPONSIVE 420*/
 #nosotros {
-  background-image: url(../../public/backgrounds/gareth_david_neon_violet.jpg);
+  background-image: url(../../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
   #nosotros h2 {
@@ -471,6 +573,50 @@ ul {
       width: 65em; }
     #nosotros .contenedor_fundadores div img {
       width: 30em; }
+  #nosotros .carrousel {
+    width: 70%;
+    max-width: 120em;
+    background-color: lightblue;
+    padding: 2em;
+    margin: auto;
+    overflow-x: hidden; }
+    #nosotros .carrousel .grande {
+      width: 300%;
+      background-color: orange;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2em;
+      transition: all .5s ease;
+      transform: translateX(0%); }
+      #nosotros .carrousel .grande .img {
+        width: calc( 100% / 3);
+        background-color: lime;
+        min-height: 25em;
+        margin: 1em; }
+        #nosotros .carrousel .grande .img a img {
+          width: 12em; }
+    #nosotros .carrousel .puntos {
+      width: 100%;
+      background-color: darkred;
+      padding: .4em;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center; }
+      #nosotros .carrousel .puntos .punto {
+        background-color: #030b15;
+        height: 2em;
+        width: 2em;
+        margin: 1em;
+        border-radius: 100%; }
+        #nosotros .carrousel .puntos .punto.activo {
+          background-color: #fdf46e;
+          box-shadow: 0em 0em 0.5em #030b15; }
 
 #contacto {
   display: flex;
@@ -606,17 +752,23 @@ footer {
 
 @keyframes parpadeo {
   0% {
-    opacity: 1; }
+    opacity: 0; }
   3% {
-    opacity: 0; }
+    opacity: 1; }
   6% {
-    opacity: 1; }
-  9% {
     opacity: 0; }
-  10% {
+  9% {
     opacity: 1; }
+  10% {
+    opacity: 0; }
+  12% {
+    opacity: 1; }
+  20% {
+    opacity: 0; }
   50% {
     opacity: 1; }
+  90% {
+    opacity: 0; }
   100% {
     opacity: 1; } }
 
@@ -630,6 +782,30 @@ footer {
   100% {
     opacity: 0;
     z-index: -1; } }
+
+@keyframes truck {
+  0% {
+    transform: translateY(-2%) rotate(-2deg); }
+  25% {
+    transform: translateY(2%) rotate(1deg); }
+  50% {
+    transform: translateY(-2%) rotate(-2deg); }
+  75% {
+    transform: translateY(2%) rotate(1deg); }
+  100% {
+    transform: translateY(-2%) rotate(-2deg); } }
+
+@keyframes rotateBox {
+  0% {
+    transform: rotate(1deg); }
+  25% {
+    transform: rotate(-1deg); }
+  50% {
+    transform: rotate(1deg); }
+  75% {
+    transform: rotate(-1deg); }
+  100% {
+    transform: rotate(1deg); } }
 
 @keyframes animate {
   0%,

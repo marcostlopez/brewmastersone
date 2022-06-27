@@ -13,3 +13,17 @@
         }
     }
 }
+
+@media screen and(max-width: 702px) {
+    #marcas .marcas_contenedor ul .marcas_logos a .marcas_logos_imagen {
+        height: 4em;
+        padding: 0.8em;
+    }
+}
+
+@media screen and(max-width: 420px) {
+    #marcas .marcas_contenedor ul .marcas_logos a .marcas_logos_imagen {
+        height: 3em;
+        padding: 0.5em;
+    }
+}

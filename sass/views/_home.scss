@@ -110,7 +110,7 @@
 /*RESPONSIVE 702*/
 @media screen and(max-width: 702px){
     #home{
-        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
     }
     #home .hero .hero_imagen img{
         height: 40em;
@@ -138,7 +138,7 @@
 /*RESPONSIVE 420*/
 @media screen and(max-width: 420px){
     #home{
-        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         & .hero .hero_imagen img{

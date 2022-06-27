@@ -28,9 +28,12 @@
             flex-direction: column;
             margin: auto;
             transition: ease-in-out 1s;
+            width: 27em;
 
             & figure img{
-                height: 30em;
+                height: 25em;
+                margin: auto;
+                display: block;
             }
             & article{
                 display: flex;
@@ -60,20 +63,26 @@
                     font-style: normal;
                     font-size: 4em;
                     text-align: center;
+                    margin-bottom: 0;
                 }
-    
-                & .boton_sub{
+                
+                & .botones{
+                    text-decoration: none;
+                    text-align: center;
+                    width: 8em;
+                    display: block;
+                    color: $fifth;
+                    font-family: $font-primary;
+                    font-size: 1.7em;
+                    font-weight: 700;
                     background-color: $principal;
-                    border: none;
-                    box-shadow: .2em .2em .5em $fifth;
-                    border-radius: .3em;
-                    padding: .5em;
-                    & a{
-                        font-family: $font-primary;
-                        font-weight: 600;
-                        font-size: 1.6em;
-                        text-decoration: none;
-                        color: $fifth;
+                    border-radius: 1em;
+                    padding: .2em .5em;
+                    border: .2em outset $fifth;
+                    transition: .8s;
+                    margin: .5em;
+                    &:hover{
+                        box-shadow: 0em 0em .5em $secondary;
                     }
                 }
 
@@ -81,8 +90,8 @@
                     color: #ffffff;
                     font-family: $font-primary;
                     font-weight: 400;
-                    font-size: 1em;
-                    margin: 1em auto;
+                    font-size: 1.6em;
+                    margin: .6em auto 1em auto;
                 }
             }
 
@@ -91,4 +100,24 @@
             }
         }
     }
+}
+
+/*RESPONSIVE 1080*/
+@media screen and(max-width: 1080px){
+
+}
+
+/*RESPONSIVE 980*/
+@media screen and(max-width: 980px){
+    
+}
+
+/*RESPONSIVE 702*/
+@media screen and(max-width: 702px){
+    
+}
+
+/*RESPONSIVE 420*/
+@media screen and(max-width: 420px){
+    
 }

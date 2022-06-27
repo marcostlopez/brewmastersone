@@ -3,9 +3,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    & h2{
+    & h3{
         font-family: $font-primary;
-        color: $secondary;
+        color: $fifth;
+        font-size: 2.5em;
+        padding-top: .5em;
+        font-weight: 700;
         text-align: center;
     }
     & article{
@@ -14,8 +17,21 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 1em;
+        margin: auto;
+        max-width: 1200px;
         & .card_envio picture img{
             width: 25em;
+        }
+
+        & .card_envio picture .truck{
+            animation-name: truck;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+        & .card_envio picture .openBox{
+            animation-name: rotateBox;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
         }
         & .card_envio_descripcion{
             color: #ffffff;
@@ -28,6 +44,7 @@
         }
     }
 }
+
 
 #birras{
     background-image: url(../../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
@@ -61,35 +78,125 @@
                 height: 40em;
                 transition: 1s;
                 opacity: 60%;
+                filter: blur(1px);
                 &:hover{
                     transform: scale(130%) translate(0%, -10%);
                     opacity: 100%;
+                    filter: blur(0px);
                 }
             }
         }
     }
 }
 
-/*rsponsive 780*/
-@media screen and (max-width: 1100px) {
-    #birras article div:last-child ul li picture img{
-        height: 35em;
-        &:hover{
-            transform: scale(110%) translate(0%, -5%);
+/*RESPONSIVE 1080*/
+@media screen and(max-width: 1080px){
+    #envio article .card_envio picture img{
+        width: 20em;
+    }
+    #envio article .card_envio_descripcion{
+        font-size: 1.6em;
+
+    }
+
+    #birras article{
+        & div:first-child picture img{
+            height: 20em;
+        }
+        & div:last-child ul li picture img{
+            height: 35em;
         }
     }
 }
 
-@media screen and (max-width: 810px) {
+/*RESPONSIVE 980*/
+@media screen and(max-width: 980px){
+    #birras article div:last-child ul li picture img{
+        height: 30em;
+    }
+}
 
-    #birras article div:last-child ul {
-        overflow-x: scroll;
-        justify-content: flex-start;
-
-        & li picture img{
-            height: 25em;
+/*RESPONSIVE 702*/
+@media screen and(max-width: 702px){
+    #envio{
+        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cianviolet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        & article .card_envio picture img{
+            width: 17em;
+        }
+        & article .card_envio_descripcion{
+            font-size: 1.4em;
+            
         }
     }
-    
+
+
+    #birras{
+        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        & article div:first-child picture img{
+            height: 10em;
+        }
+
+        & article div:last-child ul{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            justify-content: flex-start;
+
+            & li picture img{
+                height: 24em;
+                &:hover{
+                    transform: scale(105%);
+                }
+            }
+        }
+    }
+}
+
+/*RESPONSIVE 420*/
+@media screen and(max-width: 420px){
+    #envio{
+        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_cianviolet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+
+        & h3{
+            padding-top: 2em;
+            font-size: 1.8em;
+        }
+        & article .card_envio picture img{
+            width: 17em;
+        }
+        & article .card_envio_descripcion{
+            font-size: 1.4em;
+            
+        }
+    }
+
+    #birras{
+        background-image: url(../../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        & article div:first-child picture img{
+            height: 10em;
+        }
+        & article div:last-child ul{
+            overflow-x: scroll;
+            justify-content: flex-start;
+            padding-left: 10em;
+            & li picture img{
+                height: 25em;
+
+                &:hover{
+                    transform: scale(110%) translate(0%,1%);
+                }
+            }
+        }
+        
+    }
 }
 

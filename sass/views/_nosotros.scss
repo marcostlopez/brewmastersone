@@ -1,5 +1,5 @@
 #nosotros{
-    background-image: url(../../public/backgrounds/gareth_david_neon_violet.jpg);
+    background-image: url(../../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -24,6 +24,65 @@
 
         & div img{
             width: 30em;
+        }
+    }
+
+    & .carrousel{
+        width: 70%;
+        max-width: 120em;
+        background-color: lightblue;
+        padding: 2em;
+        margin: auto;
+        overflow-x: hidden;
+
+        .grande{
+            width: 300%;
+            background-color: orange;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2em;
+        
+            transition: all .5s ease;
+            transform: translateX(0%);
+
+            .img{
+                width: calc( 100% / 3 );
+                background-color: lime;
+                min-height: 25em;
+                margin: 1em;
+
+                a img{
+                    width: 12em;
+                }
+            }
+        }
+
+        .puntos{
+            width: 100%;
+            background-color: darkred;
+            padding: .4em;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .punto{
+                background-color: $principal;
+                height: 2em;
+                width: 2em;
+                margin: 1em;
+                border-radius: 100%;
+
+                &.activo{
+                    background-color: $fifth;
+                    box-shadow: 0em 0em .5em $principal;
+                }
+            }
         }
     }
 }

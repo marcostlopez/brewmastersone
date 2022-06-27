@@ -103,13 +103,14 @@
     
     <main>
 
-        <div id="progressbar"></div>
-        <div id="scrollPath"></div>
+        <!-- <div id="progressbar"></div>
+        <div id="scrollPath"></div> -->
 
         <div id="presentacion">
             <h1>
-                Brewmasters Club
+                Bienvenido a
             </h1>
+            <img src="./public/brewmasters_club_marca_neon.png" alt="brewmasters_club_marca_neon">
         </div>
 
         <section id="home">
@@ -126,7 +127,7 @@
                         Disfruta de recibir <em>tu cajita feliz</em> en la puerta de tu casa
                     </h2>
                     <h4>
-                        Seis latas de las mejores cervezas artesanales especialmente seccionadas
+                        Seis latas de las mejores cervezas artesanales especialmente seleccionadas
                         <em>para vos</em>
                     </h4>
                     <a class="botones" href="#suscripciones">
@@ -138,39 +139,39 @@
 
         </section>
 
-        <!-- <section id="envio">
+        <section id="envio">
             <h3>
                 ¿Como funciona Brewmasters?
             </h3>
             <article>
                 <div class="card_envio">
                     <picture>
-                        <img src="./public/ilustraciones/red_box.png" alt="caja">
+                        <img class="closedBox" data-aos="fade-right" data-aos-delay="200" src="./public/ilustraciones/red_box.png" alt="caja">
                     </picture>
                     <p class="card_envio_descripcion">
-                        Te suscribis y preparamos una caja especial para vos
+                        Te suscribis y armamos tu caja😜
                     </p>
                 </div>
                 <div class="card_envio">
                     <picture>
-                        <img src="./public/ilustraciones/red_truck.png" alt="camion de envio">
+                        <img class="truck" data-aos="fade-right" data-aos-delay="400" src="./public/ilustraciones/red_truck.png" alt="camion de envio">
                     </picture>
                     <p class="card_envio_descripcion">
-                        Enviaremos tu caja lo antes posible a tu hogar
+                        Te mandamos tu caja lo antes posible
                     </p>
                 </div>
                 <div class="card_envio">
                     <picture>
-                        <img src="./public/ilustraciones/red_open_box.png" alt="caja abierta con cervezas">
+                        <img class="openBox" data-aos="zoom-in-up" data-aos-delay="800" src="./public/ilustraciones/red_open_box.png" alt="caja abierta con cervezas">
                     </picture>
                     <p class="card_envio_descripcion">
-                        Descubri y disfruta de las mejores cervezas artesanales del mundo
+                        Listo! Disfruta las mejores birras artesanales🌎
                     </p>
                 </div>
             </article>
-        </section> -->
+        </section>
 
-        <!-- <section id="birras">
+        <section id="birras">
             <article>
                 <div>
                     <picture>
@@ -181,35 +182,35 @@
                     <ul>
                         <li>
                             <picture>
-                                <img src="./public/cervezas/beers_seven.png" alt="">
+                                <img src="./public/cervezas/beers_seven.png" alt="Lata cerveza ipa brewmotor">
                             </picture>
                         </li>
                         <li>
                             <picture>
-                                <img src="./public/cervezas/beer_one.png" alt="">
+                                <img src="./public/cervezas/beer_one.png" alt="Lata cerveza ipa friends with benefits zilker brewing co ">
                             </picture>
                         </li>
                         <li>
                             <picture>
-                                <img src="./public/cervezas/beer_six.png" alt="">
+                                <img src="./public/cervezas/beer_six.png" alt="Lata cerveza ipa half cocked">
                             </picture>
                         </li>
                         <li>
                             <picture>
-                                <img src="./public/cervezas/beer_nine.png" alt="">
+                                <img src="./public/cervezas/beer_nine.png" alt="Lata cerveza rubia scottish temple">
                             </picture>
                         </li>
                         <li>
                             <picture>
-                                <img src="./public/cervezas/beer_three.png" alt="">
+                                <img src="./public/cervezas/beer_three.png" alt="Lata cerveza abrazo de oso patagonia">
                             </picture>
                         </li>
                     </ul>
                 </div>
             </article>
-        </section> -->
+        </section>
 
-        <!-- <section id="marcas">
+        <section id="marcas">
             <div class="marcas_contenedor">
                 <ul>
                     <li class="marcas_logos">
@@ -268,15 +269,37 @@
 
                 </ul>
             </div>
-        </section> -->
+        </section>
 
-        <!-- <section id="suscripciones">
+        <section id="suscripciones">
             <h2>
                 ELEGI TU MEJOR PLAN
             </h2>
 
             <article>
 
+                <div class="card_suscripcion" data-aos="flip-left" data-aos-duration="2000">
+                    <figure>
+                        <img src="./public/ilustraciones/suscripcion_unico_mes_neon.png"
+                            alt="suscripcion por unica vez">
+                    </figure>
+                    <article>
+                        <h4>
+                            Junior
+                        </h4>
+                        <p class="descripcion">
+                            suscripcion por un mes
+                        </p>
+                        <p class="precio">
+                            $1700
+                        </p>
+                        
+                        <a class="botones" href="./suscripcion_rey_master.html">SUSCRIBIRME</a>
+                        
+                        <a href="./suscripcion_rey_master.html">ver mas</a>
+                    </article>
+                </div>
+                
                 <div class="card_suscripcion" data-aos="flip-left" data-aos-duration="2000">
                     <figure>
                         <img src="./public/ilustraciones/suscripcion_seis_meses_neon.png" alt="suscripcion seis meses">
@@ -291,9 +314,8 @@
                         <p class="precio">
                             $3500
                         </p>
-                        <button class="boton_sub">
-                            <a href="./suscripcion_rey_master.html">SUSCRIBIRME</a>
-                        </button>
+
+                        <a class="botones" href="./suscripcion_rey_master.html">SUSCRIBIRME</a>
 
                         <a href="./suscripcion_rey_master.html">ver mas</a>
                     </article>
@@ -313,39 +335,18 @@
                         <p class="precio">
                             $6500
                         </p>
-                        <button class="boton_sub">
-                            <a href="./suscripcion_rey_master.html">SUSCRIBIRME</a>
-                        </button>
+                        
+                        <a class="botones" href="./suscripcion_rey_master.html">SUSCRIBIRME</a>
+
                         <a href="./suscripcion_rey_master.html">ver mas</a>
                     </article>
                 </div>
 
-                <div class="card_suscripcion" data-aos="flip-left" data-aos-duration="2000">
-                    <figure>
-                        <img src="./public/ilustraciones/suscripcion_unico_mes_neon.png"
-                            alt="suscripcion por unica vez">
-                    </figure>
-                    <article>
-                        <h4>
-                            Junior
-                        </h4>
-                        <p class="descripcion">
-                            suscripcion por un mes
-                        </p>
-                        <p class="precio">
-                            $1700
-                        </p>
-                        <button class="boton_sub">
-                            <a href="./suscripcion_rey_master.html">SUSCRIBIRME</a>
-                        </button>
-                        <a href="./suscripcion_rey_master.html">ver mas</a>
-                    </article>
-                </div>
             </article>
 
-        </section> -->
+        </section>
 
-        <!-- <section id="nosotros">
+        <section id="nosotros">
             <h2>
                 Somos Brewmasters
             </h2>
@@ -359,9 +360,11 @@
                     <img src="./public/ilustraciones/birra_amor_neon.png" alt=" cerveza neon">
                     <div>
                         <p>
-                            <a href="#">Sol Cravello</a> Junto a dos amigos,  
+                            <a href="https://www.instagram.com/" target="_blank">Sol Cravello</a> reconocida sommelier de cervezas funda en 2022, junto a sus dos colegas y amigos <a href="https://www.instagram.com/" target="_blank">Facundo Rubio</a> y <a href="https://www.instagram.com/" target="_blank">Gustavo Sislack</a>, <a href="#">Brewmasters Club</a>.
+                            Una de las primeras suscripciones online pensada especialmente para vos, que disfrutas de probar los sabores de las mejores cervezas artesanales.
+                            Brewmasters club nace con la idea de formar una comunidad que comparte el gusto por esta bebida de sabores intensos y ayudar a difundir y pontenciar a los pequeños productores de las mejores cervezas artesanales alrededor del mundo.
                         </p>
-                        <a href="#suscripciones">SUSCRIBIRSE</a>
+                        <a class="botones" href="#suscripciones">SUSCRIBIRSE</a>
                     </div>
                 </div>
 
@@ -371,9 +374,68 @@
                 Unite a la comunidad de brewmasters
             </h3>
 
-        </section> -->
+            <div class="carrousel">
+                <div class="grande">
+                    <div class="img">
+                        <div>
+                            <a href="#">
+                                <img src="./public/imagenes/camylla-battani_salud.jpg">
+                            </a>
+                            <a href="#">
+                                <img src="./public/imagenes/monica_di_loxley_lata_en_rostro.jpg">
+                            </a>
+                        </div>
 
-        <!-- <section id="contacto">
+                        <a href="#">
+                            <img src="./public/imagenes/papo_fermentado_chica_con_lata.jpg">
+                        </a>
+                    </div>
+
+                    <div class="img">
+                        <div>
+                            <a href="#">
+                                <img src="./public/imagenes/camylla-battani_salud.jpg">
+                            </a>
+                            <a href="#">
+                                <img src="./public/imagenes/monica_di_loxley_lata_en_rostro.jpg">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="./public/imagenes/camylla-battani_salud.jpg">
+                            </a>
+                            <a href="#">
+                                <img src="./public/imagenes/monica_di_loxley_lata_en_rostro.jpg">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="img">
+                        <a href="#">
+                            <img src="./public/imagenes/papo_fermentado_chica_con_lata.jpg">
+                        </a>
+                        
+                        <div>
+                            <a href="#">
+                                <img src="./public/imagenes/camylla-battani_salud.jpg">
+                            </a>
+                            <a href="#">
+                                <img src="./public/imagenes/monica_di_loxley_lata_en_rostro.jpg">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <ul class="puntos">
+                    <li class="punto activo"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="contacto">
             <h2>Charlemos</h2>
 
             <div class="imgform">
@@ -430,7 +492,7 @@
                 </form>
             </div>
             
-        </section> -->
+        </section>
 
     </main>
 

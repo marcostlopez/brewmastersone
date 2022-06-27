@@ -33,22 +33,31 @@
 
 @keyframes parpadeo{
     0%{
-        opacity: 1;
+        opacity: 0;
     }
     3%{
-        opacity: 0;
+        opacity: 1;
     }
     6%{
-        opacity: 1;
-    }
-    9%{
         opacity: 0;
     }
-    10%{
+    9%{
         opacity: 1;
+    }
+    10%{
+        opacity: 0;
+    }
+    12%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
     }
     50%{
         opacity: 1;
+    }
+    90%{
+        opacity: 0;
     }
     100%{
         opacity: 1;
@@ -71,6 +80,43 @@
     }
 }
 
+@keyframes truck{
+    0%{
+        transform: translateY(-2%) rotate(-2deg);
+    }
+    25%{
+        transform: translateY(2%) rotate(1deg);
+    }
+    50%{
+        transform: translateY(-2%) rotate(-2deg);
+    }
+    75%{
+        transform: translateY(2%) rotate(1deg);
+    }
+    100%{
+        transform: translateY(-2%) rotate(-2deg);
+    }
+}
+
+@keyframes rotateBox{
+    0%{
+        transform: rotate(1deg);
+    }
+    
+    25%{
+        transform: rotate(-1deg);
+    }
+
+    50%{
+        transform: rotate(1deg);
+    }
+    75%{
+        transform: rotate(-1deg);
+    }
+    100%{
+        transform: rotate(1deg);
+    }
+}
 @keyframes animate{
 	0%,
     100%{
