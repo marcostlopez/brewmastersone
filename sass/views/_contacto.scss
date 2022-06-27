@@ -113,8 +113,19 @@
 }
 
 
-@media screen and (max-width: 980px){
-    
+@media screen and(max-width: 980px){
+    #contacto .imgform picture img {
+        height: 30em;
+        
+    }
+
+    #contacto .imgform form {
+        width: 25em;
+    }
+
+    #contacto .imgform form .form-control{
+        width: 15em;
+    }
 }
 @media screen and (max-width: 702px){
         #contacto{

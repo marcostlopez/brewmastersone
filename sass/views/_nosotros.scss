@@ -25,18 +25,19 @@
         max-width: 1200px;
         & figure{
             box-shadow: 0em .1em .5em $secondary;
+            width: 60%;
             & img{
-                width: 78em;
+                width: 100%;
             }
         }
 
         & div{
             display: flex;
             flex-direction: row;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            width: 80em;
+            max-width: 80em;
 
             & img{
                 width: 25em;
@@ -88,7 +89,7 @@
 #comunidad{
     background-image: url(../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
     background-repeat: repeat;
-    background-size: cover;
+    background-size: contain;
     & h3{
         font-family: $font-primary;
         color: $fifth;
@@ -203,16 +204,13 @@
     }
 }
 
-@media screen and(max-widht: 1080px) {
-    
-}
-
-@media screen and(max-widht: 980px) {
-    
-}
-
 @media screen and(max-widht: 702px) {
-    
+    #nosotros{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+        background-position: center;
+        background-repeat: norepeat;
+        background-size: cover;
+    }
 }
 
 @media screen and(max-widht: 420px) {
