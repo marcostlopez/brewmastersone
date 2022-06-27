@@ -108,6 +108,30 @@
     }
 }
 
+@media screen and (max-width: 1080px){
+   
+}
+
+
+@media screen and (max-width: 980px){
+    
+}
+@media screen and (max-width: 702px){
+        #contacto{
+            background-image: url(../../public/backgrounds/gareth_david_mobile_neon_orange.jpg);
+        
+        .imgform{
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            & picture img{
+                display: none;
+            }
+        }
+    }
+}
 @media screen and (max-width: 420px){
     .imgform{
         display: flex;

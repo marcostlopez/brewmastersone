@@ -776,6 +776,17 @@ ul {
         #contacto .imgform form .botones:hover {
           box-shadow: 0em 0em 0.5em #00ffff; }
 
+@media screen and (max-width: 702px) {
+  #contacto {
+    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_orange.jpg); }
+    #contacto .imgform {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly; }
+      #contacto .imgform picture img {
+        display: none; } }
+
 @media screen and (max-width: 420px) {
   .imgform {
     display: flex;
@@ -831,7 +842,7 @@ ul {
       box-shadow: 0em 0em 0.5em #00ffff; }
 
 #detalleBox {
-  background-image: url(../../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
+  background-image: url(../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
   background-position: center;
   background-repeat: repeat;
   background-size: contain;
@@ -853,7 +864,8 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    max-width: 900px; }
     #detalleBox .birraData figure img {
       height: 40em;
       width: auto; }
@@ -894,7 +906,7 @@ ul {
           height: 2em; }
 
 #otrasSubs {
-  background-image: url(../../public/backgrounds/gareth_david_desktop_neon_violetcian.jpg);
+  background-image: url(../public/backgrounds/gareth_david_desktop_neon_violetcian.jpg);
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
@@ -917,7 +929,8 @@ ul {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      align-items: center; }
+      align-items: center;
+      flex-wrap: wrap; }
       #otrasSubs .contenedorSubs div .card_suscripcion {
         background-color: #030b15;
         border-radius: 2em;
@@ -986,7 +999,7 @@ ul {
           transform: translateY(-5%); }
 
 #regalo {
-  background-image: url(../../public/backgrounds/gareth_david_desktop_neon_cian.jpg);
+  background-image: url(../public/backgrounds/gareth_david_desktop_neon_cian.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1033,6 +1046,216 @@ ul {
       margin: .5em; }
       #regalo .textoRegalo .botones:hover {
         box-shadow: 0em 0em 0.5em #00ffff; }
+
+@media screen and (max-width: 702px) {
+  .hero .data_detalle_hero {
+    width: 30em; }
+  #detalleBox {
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly; }
+    #detalleBox h3 {
+      font-family: "Nunito", serif;
+      color: #fdf46e;
+      font-size: 2.5em;
+      padding-top: 2em;
+      font-weight: 700;
+      text-align: center; }
+    #detalleBox figure img {
+      width: 20em; }
+    #detalleBox .birraData.dos {
+      display: flex;
+      flex-direction: column-reverse; }
+    #detalleBox .birraData {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #detalleBox .birraData figure img {
+        height: 28em;
+        width: auto; }
+      #detalleBox .birraData_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80%;
+        max-width: 50em; }
+        #detalleBox .birraData_info h4 {
+          font-family: "Nunito", serif;
+          font-size: 3em;
+          font-weight: 900;
+          color: #ff614d;
+          margin-bottom: .2em;
+          text-align: center; }
+        #detalleBox .birraData_info h5 {
+          font-family: "Nunito", serif;
+          font-size: 1.8em;
+          font-weight: 700;
+          color: #9ffcfd;
+          margin-bottom: .2em;
+          text-align: center; }
+        #detalleBox .birraData_info p {
+          color: #ffffff;
+          font-size: 1.4em;
+          font-family: "Nunito", serif;
+          font-weight: 400;
+          text-align: center; }
+        #detalleBox .birraData_info div {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center; }
+          #detalleBox .birraData_info div figure img {
+            width: auto;
+            height: 2em; }
+          #detalleBox .birraData_info div div figure img {
+            width: auto;
+            height: 2em; }
+  #otrasSubs {
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    padding: 5em 0em; }
+    #otrasSubs .contenedorSubs {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto; }
+      #otrasSubs .contenedorSubs h3 {
+        font-family: "Nunito", serif;
+        color: #fdf46e;
+        font-size: 2.5em;
+        padding-top: 2em;
+        font-weight: 700;
+        text-align: center; }
+      #otrasSubs .contenedorSubs div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center; }
+        #otrasSubs .contenedorSubs div .card_suscripcion {
+          background-color: #030b15;
+          border-radius: 2em;
+          border: 0.2em solid #00ffff;
+          box-shadow: 0 0 2em #00ffff;
+          display: flex;
+          flex-direction: row;
+          margin: 3em;
+          transition: ease-in-out 1s;
+          width: 40em;
+          padding: 1em; }
+          #otrasSubs .contenedorSubs div .card_suscripcion figure img {
+            height: 25em;
+            margin: auto;
+            display: block; }
+          #otrasSubs .contenedorSubs div .card_suscripcion article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto; }
+            #otrasSubs .contenedorSubs div .card_suscripcion article h4 {
+              font-family: "Nunito", serif;
+              font-weight: 800;
+              font-size: 3em;
+              color: #00ffff;
+              text-align: center; }
+            #otrasSubs .contenedorSubs div .card_suscripcion article .descripcion {
+              color: #ffffff;
+              font-family: "Nunito", serif;
+              font-weight: 500;
+              font-style: normal;
+              font-size: 1.5em;
+              text-align: center; }
+            #otrasSubs .contenedorSubs div .card_suscripcion article .precio {
+              color: #fdf46e;
+              font-family: "Nunito", serif;
+              font-weight: 400;
+              font-style: normal;
+              font-size: 4em;
+              text-align: center;
+              margin-bottom: 0; }
+            #otrasSubs .contenedorSubs div .card_suscripcion article .botones {
+              text-decoration: none;
+              text-align: center;
+              width: 8em;
+              display: block;
+              color: #fdf46e;
+              font-family: "Nunito", serif;
+              font-size: 1.7em;
+              font-weight: 700;
+              background-color: #030b15;
+              border-radius: 1em;
+              padding: .2em .5em;
+              border: 0.2em outset #fdf46e;
+              transition: .8s;
+              margin: .5em; }
+              #otrasSubs .contenedorSubs div .card_suscripcion article .botones:hover {
+                box-shadow: 0em 0em 0.5em #00ffff; }
+            #otrasSubs .contenedorSubs div .card_suscripcion article > a {
+              color: #ffffff;
+              font-family: "Nunito", serif;
+              font-weight: 400;
+              font-size: 1.6em;
+              margin: .6em auto 1em auto; }
+          #otrasSubs .contenedorSubs div .card_suscripcion:hover {
+            transform: translateY(-5%); }
+  #regalo {
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    #regalo figure img {
+      height: 25em;
+      width: auto; }
+    #regalo .textoRegalo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      width: 40em; }
+      #regalo .textoRegalo h5 {
+        font-family: "Nunito", serif;
+        font-size: 3em;
+        font-weight: 900;
+        color: #ff614d;
+        margin-bottom: .2em; }
+      #regalo .textoRegalo p {
+        font-family: "Nunito", serif;
+        font-size: 1.8em;
+        font-weight: 700;
+        color: #9ffcfd;
+        margin-bottom: .2em; }
+      #regalo .textoRegalo .botones {
+        text-decoration: none;
+        text-align: center;
+        width: 8em;
+        display: block;
+        color: #fdf46e;
+        font-family: "Nunito", serif;
+        font-size: 1.7em;
+        font-weight: 700;
+        background-color: #030b15;
+        border-radius: 1em;
+        padding: .2em .5em;
+        border: 0.2em outset #fdf46e;
+        transition: .8s;
+        margin: .5em; }
+        #regalo .textoRegalo .botones:hover {
+          box-shadow: 0em 0em 0.5em #00ffff; } }
 
 footer {
   background-color: #030b15;

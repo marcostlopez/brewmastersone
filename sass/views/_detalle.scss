@@ -83,6 +83,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        max-width: 900px;
 
         & figure img{
             height: 40em;
@@ -168,6 +169,7 @@
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
+            flex-wrap: wrap;
 
             & .card_suscripcion{
                 background-color: $principal;
@@ -310,6 +312,281 @@
             margin: .5em;
             &:hover{
                 box-shadow: 0em 0em .5em $secondary;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 702px){
+    .hero .data_detalle_hero{
+        width: 30em;    
+    }
+    
+    #detalleBox{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+        background-position: center;
+        background-repeat: repeat;
+        background-size: contain;
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        & h3{
+            font-family: $font-primary;
+            color: $fifth;
+            font-size: 2.5em;
+            padding-top: 2em;
+            font-weight: 700;
+            text-align: center;
+        }
+        & figure img{
+            width: 20em;
+        }
+        
+        & .birraData.dos{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        & .birraData{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & figure img{
+                height: 28em;
+                width: auto;
+            }
+    
+            &_info{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 80%;
+                max-width: 50em;
+            
+                & h4{
+                    font-family: $font-primary;
+                    font-size: 3em;
+                    font-weight: 900;
+                    color: $thirdly;
+                    margin-bottom: .2em;
+                    text-align: center;
+                }
+    
+                & h5{
+                    font-family: $font-primary;
+                    font-size: 1.8em;
+                    font-weight: 700;
+                    color: $fourth;
+                    margin-bottom: .2em;
+                    text-align: center;
+                }
+                & p{
+                    color: #ffffff;
+                    font-size: 1.4em;
+                    font-family: $font-primary;
+                    font-weight: 400;
+                    text-align: center;
+                }
+    
+                & div{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+    
+                    & figure img{
+                        width: auto;
+                        height: 2em;
+                    }
+                    & div figure img{
+                        width: auto;
+                        height: 2em;
+                    }
+                }
+            }
+        }
+    }
+    
+    #otrasSubs{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+    
+        padding: 5em 0em;
+    
+        & .contenedorSubs{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+    
+            & h3{
+                font-family: $font-primary;
+                color: $fifth;
+                font-size: 2.5em;
+                padding-top: 2em;
+                font-weight: 700;
+                text-align: center;
+            }
+    
+            & div{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+    
+                & .card_suscripcion{
+                    background-color: $principal;
+                    border-radius: 2em;
+                    border: .2em solid $secondary;
+                    box-shadow: 0 0 2em $secondary;
+                    display: flex;
+                    flex-direction: row;
+                    margin: 3em;
+                    transition: ease-in-out 1s;
+                    width: 40em;
+                    padding: 1em;
+                    
+        
+                    & figure img{
+                        height: 25em;
+                        margin: auto;
+                        display: block;
+                    }
+                    & article{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin: auto;
+        
+                        & h4{
+                            font-family: $font-primary;
+                            font-weight: 800;
+                            font-size: 3em;
+                            color: $secondary;
+                            text-align: center;
+                        }
+                        & .descripcion{
+                            color: #ffffff;
+                            font-family: $font-primary;
+                            font-weight: 500;
+                            font-style: normal;
+                            font-size: 1.5em;
+                            text-align: center;
+                        }
+                        & .precio{
+                            color: $fifth;
+                            font-family: $font-primary;
+                            font-weight: 400;
+                            font-style: normal;
+                            font-size: 4em;
+                            text-align: center;
+                            margin-bottom: 0;
+                        }
+                        
+                        & .botones{
+                            text-decoration: none;
+                            text-align: center;
+                            width: 8em;
+                            display: block;
+                            color: $fifth;
+                            font-family: $font-primary;
+                            font-size: 1.7em;
+                            font-weight: 700;
+                            background-color: $principal;
+                            border-radius: 1em;
+                            padding: .2em .5em;
+                            border: .2em outset $fifth;
+                            transition: .8s;
+                            margin: .5em;
+                            &:hover{
+                                box-shadow: 0em 0em .5em $secondary;
+                            }
+                        }
+        
+                        &>a{
+                            color: #ffffff;
+                            font-family: $font-primary;
+                            font-weight: 400;
+                            font-size: 1.6em;
+                            margin: .6em auto 1em auto;
+                        }
+                    }
+        
+                    &:hover{
+                        transform: translateY(-5%);
+                    }
+                }
+            }
+        }
+    }
+    
+    #regalo{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_cian.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    
+        & figure img{
+            height: 25em;
+            width: auto;
+        }
+    
+        & .textoRegalo{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 40em;
+    
+            & h5{
+                font-family: $font-primary;
+                font-size: 3em;
+                font-weight: 900;
+                color: $thirdly;
+                margin-bottom: .2em;
+            }
+            & p{
+                font-family: $font-primary;
+                font-size: 1.8em;
+                font-weight: 700;
+                color: $fourth;
+                margin-bottom: .2em;
+            }
+            & .botones{
+                text-decoration: none;
+                text-align: center;
+                width: 8em;
+                display: block;
+                color: $fifth;
+                font-family: $font-primary;
+                font-size: 1.7em;
+                font-weight: 700;
+                background-color: $principal;
+                border-radius: 1em;
+                padding: .2em .5em;
+                border: .2em outset $fifth;
+                transition: .8s;
+                margin: .5em;
+                &:hover{
+                    box-shadow: 0em 0em .5em $secondary;
+                }
             }
         }
     }
