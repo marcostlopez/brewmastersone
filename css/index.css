@@ -429,7 +429,7 @@ ul {
 
 #suscripciones {
   background-image: url(../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
   padding-top: 6.5em;
@@ -526,6 +526,10 @@ ul {
 
 /*RESPONSIVE 980*/
 @media screen and (max-width: 980px) {
+  #suscripcion {
+    background-image: url(../public/backgrounds/gareth_david_desktop_neon_violet.jpg);
+    background-size: contain;
+    background-repeat: repeat; }
   article {
     display: flex;
     flex-direction: row;
@@ -593,9 +597,11 @@ ul {
             box-shadow: 0em 0em 0.5em #00ffff; } }
 
 /*RESPONSIVE 702*/
-@media screen and (max-width: 702px) {
+@media screen and (max-width: 720px) {
   #suscripciones {
-    background-image: url(../../public/backgrounds/gareth_david_mobile_neon_violet.jpg); } }
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+    background-repeat: repeat;
+    background-size: contain; } }
 
 #nosotros {
   background-image: url(../public/backgrounds/gareth_david_desktop_neon_violetcian.jpg);
@@ -643,7 +649,7 @@ ul {
           font-size: 1.6em;
           font-weight: 300;
           color: #ffffff;
-          width: 90%; }
+          width: 30em; }
           #nosotros .contenedor_fundadores div .texto_fundadores p > a {
             color: #ff614d;
             font-weight: 500; }
@@ -755,7 +761,74 @@ ul {
 
 @media screen and (max-width: 780px) {
   #nosotros {
-    background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center; }
+    #nosotros h2 {
+      color: #00ffff;
+      font-family: "Nunito", serif;
+      font-size: 3em;
+      font-weight: 700;
+      text-align: center;
+      margin: auto auto 1em auto;
+      padding-top: 2em;
+      padding: .5em; }
+    #nosotros .contenedor_fundadores {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      max-width: 1200px; }
+      #nosotros .contenedor_fundadores figure {
+        box-shadow: 0em 0.1em 0.5em #00ffff;
+        width: 40em; }
+        #nosotros .contenedor_fundadores figure img {
+          width: 40em; }
+      #nosotros .contenedor_fundadores div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 80em; }
+        #nosotros .contenedor_fundadores div img {
+          width: 25em; }
+        #nosotros .contenedor_fundadores div .texto_fundadores {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          #nosotros .contenedor_fundadores div .texto_fundadores p {
+            text-align: center;
+            font-family: "Nunito", serif;
+            font-size: 1.6em;
+            font-weight: 300;
+            color: #ffffff;
+            width: 30em; }
+            #nosotros .contenedor_fundadores div .texto_fundadores p > a {
+              color: #ff614d;
+              font-weight: 500; }
+          #nosotros .contenedor_fundadores div .texto_fundadores .botones {
+            text-decoration: none;
+            text-align: center;
+            width: 8em;
+            display: block;
+            color: #fdf46e;
+            font-family: "Nunito", serif;
+            font-size: 1.7em;
+            font-weight: 700;
+            background-color: #030b15;
+            border-radius: 1em;
+            padding: .2em .5em;
+            border: 0.2em outset #fdf46e;
+            transition: .8s;
+            margin: .5em; }
+            #nosotros .contenedor_fundadores div .texto_fundadores .botones:hover {
+              box-shadow: 0em 0em 0.5em #00ffff; }
+  #comunidad {
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_cianorange.jpg);
+    background-repeat: repeat;
+    background-size: cover;
     background-position: center; } }
 
 #contacto {

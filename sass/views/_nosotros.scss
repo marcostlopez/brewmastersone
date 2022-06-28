@@ -54,7 +54,7 @@
                     font-size: 1.6em;
                     font-weight: 300;
                     color: #ffffff;
-                    width: 90%;
+                    width: 30em;
 
                     &>a{
                         color: $thirdly;
@@ -206,7 +206,96 @@
 
 @media screen and (max-width: 780px){
     #nosotros{
-        background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: center;
+    
+        & h2{
+            color: $secondary;
+            font-family: $font-primary;
+            font-size: 3em;
+            font-weight: 700;
+            text-align: center;
+            margin: auto auto 1em auto;
+            padding-top: 2em;
+            padding: .5em;
+        }
+    
+        & .contenedor_fundadores{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            max-width: 1200px;
+            & figure{
+                box-shadow: 0em .1em .5em $secondary;
+                width: 40em;
+                & img{
+                    width: 40em;
+                }
+            }
+    
+            & div{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                max-width: 80em;
+    
+                & img{
+                    width: 25em;
+                }
+    
+                & .texto_fundadores{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    & p{
+                        text-align: center;
+                        font-family: $font-primary;
+                        font-size: 1.6em;
+                        font-weight: 300;
+                        color: #ffffff;
+                        width: 30em;
+    
+                        &>a{
+                            color: $thirdly;
+                            font-weight: 500;
+                        }
+                    }
+                    & .botones{
+                        text-decoration: none;
+                        text-align: center;
+                        width: 8em;
+                        display: block;
+                        color: $fifth;
+                        font-family: $font-primary;
+                        font-size: 1.7em;
+                        font-weight: 700;
+                        background-color: $principal;
+                        border-radius: 1em;
+                        padding: .2em .5em;
+                        border: .2em outset $fifth;
+                        transition: .8s;
+                        margin: .5em;
+    
+                        &:hover{
+                            box-shadow: 0em 0em .5em $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #comunidad{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_cianorange.jpg);
+        background-repeat: repeat;
+        background-size: cover;
         background-position: center;
     }
+
 }
