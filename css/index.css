@@ -1079,7 +1079,7 @@ ul {
   #nosotros {
     background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: cover;
     background-position: top;
     padding-top: 3em;
     padding-bottom: 3em; }
@@ -1206,6 +1206,165 @@ ul {
             text-align: center; }
             #comunidad .carrousel .grande .img a img {
               width: 14em;
+              margin: .5em;
+              padding: 2em .5em;
+              background-color: #030b15;
+              border-radius: .8em;
+              transition: 1s; }
+              #comunidad .carrousel .grande .img a img:hover {
+                box-shadow: 0em 0em 0.3em #00ffff;
+                transform: scale(115%); }
+      #comunidad .carrousel .puntos {
+        width: 100%;
+        padding: 0em;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center; }
+        #comunidad .carrousel .puntos .punto {
+          background-color: #030b15;
+          height: 1.8em;
+          width: 1.8em;
+          margin: 1em;
+          border-radius: 100%; }
+          #comunidad .carrousel .puntos .punto.activo {
+            background-color: #fdf46e;
+            box-shadow: 0em 0em 0.5em #00ffff; } }
+
+/*RESPONSIVE A 420PX*/
+@media screen and (max-width: 420px) {
+  #nosotros {
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: top;
+    padding-top: 3em;
+    padding-bottom: 3em; }
+    #nosotros h2 {
+      color: #00ffff;
+      font-family: "Nunito", serif;
+      font-size: 3em;
+      font-weight: 700;
+      text-align: center;
+      margin: auto auto 1em auto;
+      padding-top: 2em;
+      padding: .5em; }
+    #nosotros .contenedor_fundadores {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      max-width: 1200px; }
+      #nosotros .contenedor_fundadores figure {
+        box-shadow: 0em 0.1em 0.5em #00ffff;
+        width: 26em; }
+        #nosotros .contenedor_fundadores figure img {
+          width: 100%; }
+      #nosotros .contenedor_fundadores div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 80em; }
+        #nosotros .contenedor_fundadores div img {
+          width: 20em; }
+        #nosotros .contenedor_fundadores div .texto_fundadores {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          #nosotros .contenedor_fundadores div .texto_fundadores p {
+            text-align: center;
+            font-family: "Nunito", serif;
+            font-size: 1.6em;
+            font-weight: 300;
+            color: #ffffff;
+            width: 18em;
+            padding-top: 0em;
+            margin-bottom: 1em; }
+            #nosotros .contenedor_fundadores div .texto_fundadores p > a {
+              color: #ff614d;
+              font-weight: 500; }
+          #nosotros .contenedor_fundadores div .texto_fundadores .botones {
+            text-decoration: none;
+            text-align: center;
+            width: 8em;
+            display: block;
+            color: #fdf46e;
+            font-family: "Nunito", serif;
+            font-size: 1.7em;
+            font-weight: 700;
+            background-color: #030b15;
+            border-radius: 1em;
+            padding: .2em .5em;
+            border: 0.2em outset #fdf46e;
+            transition: .8s;
+            margin: .5em; }
+            #nosotros .contenedor_fundadores div .texto_fundadores .botones:hover {
+              box-shadow: 0em 0em 0.5em #00ffff; }
+  #comunidad {
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_cianorange.jpg);
+    background-repeat: repeat;
+    background-size: cover; }
+    #comunidad h3 {
+      font-family: "Nunito", serif;
+      color: #fdf46e;
+      font-size: 2.5em;
+      padding-top: .5em;
+      font-weight: 700;
+      text-align: center; }
+    #comunidad h4 {
+      color: #ffffff;
+      text-align: center;
+      font-family: "Nunito", serif;
+      font-size: 1.6em;
+      font-weight: 400; }
+      #comunidad h4 a {
+        color: #00ffff;
+        font-weight: 600;
+        font-size: 1.6rem;
+        font-family: "Nunito", serif; }
+    #comunidad .carrousel {
+      width: 90%;
+      height: 42em;
+      max-width: 120em;
+      margin: auto;
+      overflow-x: hidden; }
+      #comunidad .carrousel .grande {
+        width: 300%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1em;
+        transition: all .5s ease;
+        transform: translateX(0%); }
+        #comunidad .carrousel .grande .img {
+          width: calc( 100% / 3);
+          min-height: 25em;
+          height: 30em;
+          margin: .5em;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center; }
+          #comunidad .carrousel .grande .img:first-child > a img {
+            width: 11.5em; }
+          #comunidad .carrousel .grande .img:last-child a img {
+            width: 8em;
+            height: auto; }
+          #comunidad .carrousel .grande .img > div {
+            display: flex;
+            flex-direction: column; }
+          #comunidad .carrousel .grande .img a {
+            text-decoration: none;
+            margin: 0;
+            text-align: center; }
+            #comunidad .carrousel .grande .img a img {
+              width: 9em;
               margin: .5em;
               padding: 2em .5em;
               background-color: #030b15;
