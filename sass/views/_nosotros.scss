@@ -25,7 +25,7 @@
         max-width: 1200px;
         & figure{
             box-shadow: 0em .1em .5em $secondary;
-            width: 60%;
+            width: 70em;
             & img{
                 width: 100%;
             }
@@ -89,7 +89,7 @@
 #comunidad{
     background-image: url(../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
     background-repeat: repeat;
-    background-size: contain;
+    background-size: cover;
     & h3{
         font-family: $font-primary;
         color: $fifth;
@@ -164,7 +164,7 @@
                         width: 25em;
                         margin: .5em;
                         padding: 2em .5em;
-                        background-color: #ffffff;
+                        background-color: $principal;
                         border-radius: .8em;
                         transition: 1s;
 
@@ -204,12 +204,14 @@
     }
 }
 
-@media screen and (max-width: 780px){
+/*RESPONSIVE A 1080PX*/
+
+@media screen and (max-width: 1080px) {
     #nosotros{
-        background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
-        background-repeat: repeat;
-        background-size: cover;
-        background-position: center;
+        background-image: url(../public/backgrounds/gareth_david_desktop_neon_violetcian.jpg);
+        background-repeat: repeat-y;
+        background-size: contain;
+        background-position: top;
     
         & h2{
             color: $secondary;
@@ -230,9 +232,9 @@
             max-width: 1200px;
             & figure{
                 box-shadow: 0em .1em .5em $secondary;
-                width: 40em;
+                width: 65em;
                 & img{
-                    width: 40em;
+                    width: 100%;
                 }
             }
     
@@ -245,21 +247,23 @@
                 max-width: 80em;
     
                 & img{
-                    width: 25em;
+                    width: 23em;
                 }
     
                 & .texto_fundadores{
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-start;
     
                     & p{
-                        text-align: center;
+                        text-align: left;
                         font-family: $font-primary;
                         font-size: 1.6em;
                         font-weight: 300;
                         color: #ffffff;
-                        width: 30em;
+                        width: 27em;
+                        padding-top: 1em;
+                        margin-bottom: 0em;
     
                         &>a{
                             color: $thirdly;
@@ -289,13 +293,545 @@
                 }
             }
         }
+    }    
+
+    #comunidad{
+        background-image: url(../public/backgrounds/gareth_david_desktop_neon_cianorange.jpg);
+        background-repeat: repeat;
+        background-size: cover;
+        & h3{
+            font-family: $font-primary;
+            color: $fifth;
+            font-size: 2.5em;
+            padding-top: .5em;
+            font-weight: 700;
+            text-align: center;
+        }
+    
+        & h4{
+            color: #ffffff;
+            text-align: center;
+            font-family: $font-primary;
+            font-size: 1.8em;
+            font-weight: 400;
+            & a{
+                color: $secondary;
+                font-weight: 600;
+                font-size: 1.8rem;
+                font-family: $font-primary;
+            }
+        }
+    
+        & .carrousel{
+            width: 60%;
+            height: 55em;
+            max-width: 120em;
+            // padding: 2em;
+            margin: auto;
+            overflow-x: hidden;
+    
+    
+            .grande{
+                width: 300%;
+                // background-color: orange;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 1em;
+            
+                transition: all .5s ease;
+                transform: translateX(0%);
+    
+                .img{
+                    width: calc( 100% / 3 );
+                    // background-color: lime;
+                    min-height: 25em;
+                    height: 44em;
+                    margin: .5em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    &:first-child>a img{
+                        width: 25.5em;
+                    }
+                    &:last-child a img{
+                        width: 17em;
+                        height: auto;
+                    }
+                    &>div{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    & a{
+                        text-decoration: none;
+                        margin: 0;
+                        text-align: center;
+                        & img{
+                            width: 25em;
+                            margin: .5em;
+                            padding: 2em .5em;
+                            background-color: $principal;
+                            border-radius: .8em;
+                            transition: 1s;
+    
+                            &:hover{
+                                box-shadow: 0em 0em .3em $secondary;
+                                transform: scale(115%);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .puntos{
+                width: 100%;
+                // background-color: darkred;
+                padding: 0em;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+    
+                .punto{
+                    background-color: $principal;
+                    height: 1.8em;
+                    width: 1.8em;
+                    margin: 1em;
+                    border-radius: 100%;
+    
+                    &.activo{
+                        background-color: $fifth;
+                        box-shadow: 0em 0em .5em $secondary;
+                    }
+                }
+            }
+        }
     }
+
+}
+
+/*RESPONSIVE A 980PX*/
+
+@media screen and (max-width: 980px) {
+    #nosotros{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
+        background-repeat: repeat-y;
+        background-size: cover;
+        background-position: top;
+        padding-top: 5em;
+        & h2{
+            color: $secondary;
+            font-family: $font-primary;
+            font-size: 3em;
+            font-weight: 700;
+            text-align: center;
+            margin: auto auto 1em auto;
+            padding-top: 2em;
+            padding: .5em;
+        }
+    
+        & .contenedor_fundadores{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            max-width: 1200px;
+            & figure{
+                box-shadow: 0em .1em .5em $secondary;
+                width: 55em;
+                & img{
+                    width: 100%;
+                }
+            }
+    
+            & div{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                max-width: 80em;
+    
+                & img{
+                    width: 22em;
+                }
+    
+                & .texto_fundadores{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+    
+                    & p{
+                        text-align: left;
+                        font-family: $font-primary;
+                        font-size: 1.6em;
+                        font-weight: 300;
+                        color: #ffffff;
+                        width: 20em;
+                        padding-top: 1em;
+                        margin-bottom: 0em;
+    
+                        &>a{
+                            color: $thirdly;
+                            font-weight: 500;
+                        }
+                    }
+                    & .botones{
+                        text-decoration: none;
+                        text-align: center;
+                        width: 8em;
+                        display: block;
+                        color: $fifth;
+                        font-family: $font-primary;
+                        font-size: 1.7em;
+                        font-weight: 700;
+                        background-color: $principal;
+                        border-radius: 1em;
+                        padding: .2em .5em;
+                        border: .2em outset $fifth;
+                        transition: .8s;
+                        margin: .5em;
+    
+                        &:hover{
+                            box-shadow: 0em 0em .5em $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }    
 
     #comunidad{
         background-image: url(../public/backgrounds/gareth_david_mobile_neon_cianorange.jpg);
         background-repeat: repeat;
         background-size: cover;
-        background-position: center;
+        & h3{
+            font-family: $font-primary;
+            color: $fifth;
+            font-size: 2.5em;
+            padding-top: .5em;
+            font-weight: 700;
+            text-align: center;
+        }
+    
+        & h4{
+            color: #ffffff;
+            text-align: center;
+            font-family: $font-primary;
+            font-size: 1.8em;
+            font-weight: 400;
+            & a{
+                color: $secondary;
+                font-weight: 600;
+                font-size: 1.8rem;
+                font-family: $font-primary;
+            }
+        }
+    
+        & .carrousel{
+            width: 90%;
+            height: 55em;
+            max-width: 120em;
+            // padding: 2em;
+            margin: auto;
+            overflow-x: hidden;
+    
+    
+            .grande{
+                width: 300%;
+                // background-color: orange;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 1em;
+            
+                transition: all .5s ease;
+                transform: translateX(0%);
+    
+                .img{
+                    width: calc( 100% / 3 );
+                    // background-color: lime;
+                    min-height: 25em;
+                    height: 42em;
+                    margin: .5em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    &:first-child>a img{
+                        width: 25.5em;
+                    }
+                    &:last-child a img{
+                        width: 17em;
+                        height: auto;
+                    }
+                    &>div{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    & a{
+                        text-decoration: none;
+                        margin: 0;
+                        text-align: center;
+                        & img{
+                            width: 25em;
+                            margin: .5em;
+                            padding: 2em .5em;
+                            background-color: $principal;
+                            border-radius: .8em;
+                            transition: 1s;
+    
+                            &:hover{
+                                box-shadow: 0em 0em .3em $secondary;
+                                transform: scale(115%);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .puntos{
+                width: 100%;
+                // background-color: darkred;
+                padding: 0em;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+    
+                .punto{
+                    background-color: $principal;
+                    height: 1.8em;
+                    width: 1.8em;
+                    margin: 1em;
+                    border-radius: 100%;
+    
+                    &.activo{
+                        background-color: $fifth;
+                        box-shadow: 0em 0em .5em $secondary;
+                    }
+                }
+            }
+        }
     }
+}
 
+/*RESPONSIVE A 702PX*/
+
+@media screen and (max-width: 702px) {
+    #nosotros{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_violetcian.jpg);
+        background-repeat: repeat-y;
+        background-size: contain;
+        background-position: top;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        & h2{
+            color: $secondary;
+            font-family: $font-primary;
+            font-size: 3em;
+            font-weight: 700;
+            text-align: center;
+            margin: auto auto 1em auto;
+            padding-top: 2em;
+            padding: .5em;
+        }
+    
+        & .contenedor_fundadores{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            max-width: 1200px;
+            & figure{
+                box-shadow: 0em .1em .5em $secondary;
+                width: 38em;
+                & img{
+                    width: 100%;
+                }
+            }
+    
+            & div{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                max-width: 80em;
+    
+                & img{
+                    width: 20em;
+                }
+    
+                & .texto_fundadores{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    & p{
+                        text-align: center;
+                        font-family: $font-primary;
+                        font-size: 1.6em;
+                        font-weight: 300;
+                        color: #ffffff;
+                        width: 20em;
+                        padding-top: 0em;
+                        margin-bottom: 1em;
+    
+                        &>a{
+                            color: $thirdly;
+                            font-weight: 500;
+                        }
+                    }
+                    & .botones{
+                        text-decoration: none;
+                        text-align: center;
+                        width: 8em;
+                        display: block;
+                        color: $fifth;
+                        font-family: $font-primary;
+                        font-size: 1.7em;
+                        font-weight: 700;
+                        background-color: $principal;
+                        border-radius: 1em;
+                        padding: .2em .5em;
+                        border: .2em outset $fifth;
+                        transition: .8s;
+                        margin: .5em;
+    
+                        &:hover{
+                            box-shadow: 0em 0em .5em $secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+
+    #comunidad{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_cianorange.jpg);
+        background-repeat: repeat;
+        background-size: cover;
+        & h3{
+            font-family: $font-primary;
+            color: $fifth;
+            font-size: 2.5em;
+            padding-top: .5em;
+            font-weight: 700;
+            text-align: center;
+        }
+    
+        & h4{
+            color: #ffffff;
+            text-align: center;
+            font-family: $font-primary;
+            font-size: 1.8em;
+            font-weight: 400;
+            & a{
+                color: $secondary;
+                font-weight: 600;
+                font-size: 1.8rem;
+                font-family: $font-primary;
+            }
+        }
+    
+        & .carrousel{
+            width: 90%;
+            height: 42em;
+            max-width: 120em;
+            // padding: 2em;
+            margin: auto;
+            overflow-x: hidden;
+    
+    
+            .grande{
+                width: 300%;
+                // background-color: orange;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 1em;
+            
+                transition: all .5s ease;
+                transform: translateX(0%);
+    
+                .img{
+                    width: calc( 100% / 3 );
+                    // background-color: lime;
+                    min-height: 25em;
+                    height: 30em;
+                    margin: .5em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    &:first-child>a img{
+                        width: 15.5em;
+                    }
+                    &:last-child a img{
+                        width: 10em;
+                        height: auto;
+                    }
+                    &>div{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    & a{
+                        text-decoration: none;
+                        margin: 0;
+                        text-align: center;
+                        & img{
+                            width: 14em;
+                            margin: .5em;
+                            padding: 2em .5em;
+                            background-color: $principal;
+                            border-radius: .8em;
+                            transition: 1s;
+    
+                            &:hover{
+                                box-shadow: 0em 0em .3em $secondary;
+                                transform: scale(115%);
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .puntos{
+                width: 100%;
+                // background-color: darkred;
+                padding: 0em;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+    
+                .punto{
+                    background-color: $principal;
+                    height: 1.8em;
+                    width: 1.8em;
+                    margin: 1em;
+                    border-radius: 100%;
+    
+                    &.activo{
+                        background-color: $fifth;
+                        box-shadow: 0em 0em .5em $secondary;
+                    }
+                }
+            }
+        }
+    }
 }
