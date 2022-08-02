@@ -348,7 +348,7 @@ ul {
 /*RESPONSIVE 980*/
 @media screen and (max-width: 980px) {
   #birras article div:last-child ul li picture img {
-    height: 30em; } }
+    height: 27em; } }
 
 /*RESPONSIVE 702*/
 @media screen and (max-width: 702px) {
