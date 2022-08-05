@@ -31,3 +31,27 @@
     font-size: 3em;
     margin: 0px 25px 0px 25px;
 }
+
+@media screen and (max-width: 420px){
+
+    #presentacion h1 {
+        text-align: center;
+        padding-top: 300px;
+        color: $fourth;
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 2em;
+        margin: 0px 25px 0px 25px;
+    }
+
+    #presentacion img{
+        height: 5em;
+        margin: auto;
+        display: block;
+        animation-name: parpadeo;
+        animation-duration: 4s;
+        animation-delay: .5s;
+        animation-iteration-count: initial;
+    }
+    
+}

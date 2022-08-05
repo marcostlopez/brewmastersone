@@ -50,6 +50,24 @@ ul {
   font-size: 3em;
   margin: 0px 25px 0px 25px; }
 
+@media screen and (max-width: 420px) {
+  #presentacion h1 {
+    text-align: center;
+    padding-top: 300px;
+    color: #9ffcfd;
+    font-family: "Nunito", serif;
+    font-weight: 700;
+    font-size: 2em;
+    margin: 0px 25px 0px 25px; }
+  #presentacion img {
+    height: 5em;
+    margin: auto;
+    display: block;
+    animation-name: parpadeo;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-iteration-count: initial; } }
+
 .header {
   background-color: #030b15;
   z-index: 1;
@@ -348,7 +366,7 @@ ul {
 /*RESPONSIVE 980*/
 @media screen and (max-width: 980px) {
   #birras article div:last-child ul li picture img {
-    height: 27em; } }
+    height: 25em; } }
 
 /*RESPONSIVE 702*/
 @media screen and (max-width: 702px) {
@@ -365,16 +383,19 @@ ul {
     background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
     background-repeat: no-repeat;
     background-size: cover; }
-    #birras article div:first-child picture img {
-      height: 10em; }
-    #birras article div:last-child ul {
-      overflow-x: scroll;
-      overflow-y: hidden;
-      justify-content: flex-start; }
-      #birras article div:last-child ul li picture img {
-        height: 24em; }
-        #birras article div:last-child ul li picture img:hover {
-          transform: scale(105%); } }
+    #birras article div {
+      width: 100%; }
+      #birras article div:first-child picture img {
+        height: 10em; }
+      #birras article div:last-child ul {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        padding-left: 10em; }
+        #birras article div:last-child ul li picture img {
+          height: 25em; }
+          #birras article div:last-child ul li picture img:hover {
+            transform: scale(105%); } }
 
 /*RESPONSIVE 420*/
 @media screen and (max-width: 420px) {
@@ -394,16 +415,18 @@ ul {
     background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
     background-repeat: no-repeat;
     background-size: cover; }
-    #birras article div:first-child picture img {
-      height: 10em; }
-    #birras article div:last-child ul {
-      overflow-x: scroll;
-      justify-content: flex-start;
-      padding-left: 10em; }
-      #birras article div:last-child ul li picture img {
-        height: 25em; }
-        #birras article div:last-child ul li picture img:hover {
-          transform: scale(110%) translate(0%, 1%); } }
+    #birras article div {
+      width: 100%; }
+      #birras article div:first-child picture img {
+        height: 10em; }
+      #birras article div:last-child ul {
+        overflow-x: scroll;
+        justify-content: flex-start;
+        padding-left: 10em; }
+        #birras article div:last-child ul li picture img {
+          height: 25em; }
+          #birras article div:last-child ul li picture img:hover {
+            transform: scale(110%) translate(0%, 1%); } }
 
 #marcas .marcas_contenedor ul {
   display: flex;
@@ -596,12 +619,33 @@ ul {
           article .card_suscripcion article .botones:hover {
             box-shadow: 0em 0em 0.5em #00ffff; } }
 
-/*RESPONSIVE 702*/
+/*RESPONSIVE 720*/
 @media screen and (max-width: 720px) {
   #suscripciones {
     background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
     background-repeat: repeat;
-    background-size: contain; } }
+    background-size: contain; }
+    #suscripciones article .card_suscripcion {
+      flex-direction: row;
+      height: 27em;
+      width: 70%;
+      margin-bottom: 2em; } }
+
+/*RESPONSIVE 420*/
+@media screen and (max-width: 420px) {
+  #suscripciones {
+    background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+    background-repeat: repeat;
+    background-size: contain; }
+    #suscripciones article .card_suscripcion {
+      flex-direction: row;
+      height: 27em;
+      width: 70%;
+      margin-bottom: 2em;
+      align-items: center;
+      justify-content: center; }
+      #suscripciones article .card_suscripcion figure img {
+        height: 15em; } }
 
 #nosotros {
   background-image: url(../public/backgrounds/gareth_david_desktop_neon_violetcian.jpg);
@@ -1487,6 +1531,8 @@ ul {
     height: 30em; }
   #contacto .imgform form {
     width: 25em; }
+    #contacto .imgform form .form-group {
+      width: unset; }
   #contacto .imgform form .form-control {
     width: 15em; } }
 

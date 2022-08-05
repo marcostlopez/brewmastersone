@@ -121,6 +121,10 @@
 
     #contacto .imgform form {
         width: 25em;
+
+        & .form-group{
+            width: unset;
+        }
     }
 
     #contacto .imgform form .form-control{

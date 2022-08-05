@@ -112,7 +112,7 @@
 /*RESPONSIVE 980*/
 @media screen and(max-width: 980px){
     #birras article div:last-child ul li picture img{
-        height: 27em;
+        height: 25em;
     }
 }
 
@@ -137,19 +137,25 @@
         background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        & article div:first-child picture img{
-            height: 10em;
-        }
 
-        & article div:last-child ul{
-            overflow-x: scroll;
-            overflow-y: hidden;
-            justify-content: flex-start;
+        & article div{
+            width: 100%;
 
-            & li picture img{
-                height: 24em;
-                &:hover{
-                    transform: scale(105%);
+            &:first-child picture img{
+                height: 10em;
+            }
+
+            &:last-child ul{
+                overflow-x: scroll;
+                overflow-y: hidden;
+                justify-content: flex-start;
+                padding-left: 10em;
+                & li picture img{
+                    height: 25em;
+    
+                    &:hover{
+                        transform: scale(105%);
+                    }
                 }
             }
         }
@@ -181,18 +187,24 @@
         background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        & article div:first-child picture img{
-            height: 10em;
-        }
-        & article div:last-child ul{
-            overflow-x: scroll;
-            justify-content: flex-start;
-            padding-left: 10em;
-            & li picture img{
-                height: 25em;
 
-                &:hover{
-                    transform: scale(110%) translate(0%,1%);
+        & article div{
+            width: 100%;
+
+            &:first-child picture img{
+                height: 10em;
+            }
+
+            &:last-child ul{
+                overflow-x: scroll;
+                justify-content: flex-start;
+                padding-left: 10em;
+                & li picture img{
+                    height: 25em;
+    
+                    &:hover{
+                        transform: scale(110%) translate(0%,1%);
+                    }
                 }
             }
         }

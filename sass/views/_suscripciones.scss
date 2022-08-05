@@ -207,12 +207,44 @@
 
 }
 
-/*RESPONSIVE 702*/
+/*RESPONSIVE 720*/
 @media screen and(max-width: 720px){
     #suscripciones{
         background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
         background-repeat: repeat;
         background-size: contain;
+
+        & article .card_suscripcion{
+            flex-direction: row;
+            height: 27em;
+            width: 70%;
+            margin-bottom: 2em;
+        }
     }
     
 }
+
+/*RESPONSIVE 420*/
+@media screen and(max-width: 420px){
+    #suscripciones{
+        background-image: url(../public/backgrounds/gareth_david_mobile_neon_violet.jpg);
+        background-repeat: repeat;
+        background-size: contain;
+
+        & article .card_suscripcion{
+            flex-direction: row;
+            height: 27em;
+            width: 70%;
+            margin-bottom: 2em;
+            align-items: center;
+            justify-content: center;
+
+            & figure img{
+                height: 15em;
+            }
+        }
+    }
+    
+}
+
+
